@@ -19,6 +19,7 @@
             </tr>
         </div>
     </div>
+    {{-- King Rizky --}}
     <button class="buku">
         <i class="fa-solid fa-book-bookmark"></i>
         <a href="#"><b>Buku Panduan Menggunakan Website</b></a>

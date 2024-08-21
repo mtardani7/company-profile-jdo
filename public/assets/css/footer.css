@@ -1,0 +1,30 @@
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .container {
+    flex: 1;
+  }
+  .footer {
+    background-color: #1B9C85;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  .contact-info p {
+    margin: 0; 
+    padding: 5px 0; 
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-info i {
+    margin-right: 10px;
+    font-size: 16px;
+  }

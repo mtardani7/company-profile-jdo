@@ -1,0 +1,168 @@
+@include('layouts.navbar')
+
+@section('title')
+    About Us
+@endsection
+
+@section('content')
+
+<link rel="stylesheet" href="{{ asset('assets/css/about_us.css') }}">
+
+<img src="{{ asset('assets/image/about_us.png') }}" alt="background" style="width: 1280px">
+
+<div class="teks">
+    <h1>Our Story</h1>
+    <img src="{{ asset('assets/image/kerja_sama.jpeg')}}" alt="kerja_sama" style="margin-left: 230px; width: 845px;">
+</div>
+
+<div class="card-about container text-center">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <div class="card text-start" style="border-radius: 10px">
+                <div class="card-body">
+                    <p class="card-text">
+                        Established in 2019, PT Jewel Dyna Oralcare (“JDO”) is a joint venture company of Dynapack Asia Pte Ltd (Singapore) (“Dynapack”) and Jewel Consumer Care Co. Ltd (India) (“JCC”)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-start" style="border-radius: 10px">
+                <div class="card-body">
+                    <h4 class="card-title">Mission:</h4>
+                    <p class="card-text">
+                        “To become the leading partner in providing plastic oral care solutions for our customers in Indonesia”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="teks">
+    <h1>Our Shareholders</h1>
+</div>
+
+<div class="jawel-da container text-center">
+    <div class="row align-items-center">
+      <div class="col">
+        <img src="{{ asset('assets/image/jawel.png')}}" alt="kerja_sama" style="margin-right: 70px; width: 260px; height: 160">
+      </div>
+      <div class="col">
+        <div class="card text-start" style="border-radius: 10px">
+            <div class="card-jawel">
+                <p class="card-text">
+                    <ul>
+                        <li>
+                            Established in 1993, JCC has grown to become one of the largest oral care manufacturers in Asia with over 3 billion products sold
+                        </li>
+                        <li>
+                            Headquartered in Baroda, Gujarat, India with 5 global offices in India, United Kingdom, United States, Australia, and Indonesia
+                        </li>
+                        <li>
+                            Trusted partners for oral care and hygiene solutions for multi-national brands
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="jawel-da container text-center">
+    <div class="row align-items-center">
+      <div class="col">
+        <div class="card text-start">
+            <div class="card-jawel">
+                <p class="card-text">
+                    <ul>
+                        <li>
+                            Established in 1993, JCC has grown to become one of the largest oral care manufacturers in Asia with over 3 billion products sold
+                        </li>
+                        <li>
+                            Headquartered in Baroda, Gujarat, India with 5 global offices in India, United Kingdom, United States, Australia, and Indonesia
+                        </li>
+                        <li>
+                            Trusted partners for oral care and hygiene solutions for multi-national brands
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="col">
+        <img src="{{ asset('assets/image/dynapack_asia.png')}}" alt="kerja_sama" style="margin-left: 70px; width: 260px; height: 160">
+      </div>
+    </div>
+</div>
+
+<div class="teks">
+    <h1>Management Team</h1>
+</div>
+
+<div class="card-body-profile">
+    <div class="card-body2">
+        <div class="profile-1 container text-center" style="margin-top: 250px"> 
+            <ul class="horizontal-list">
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Loe Leo</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Rusher</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Lorem Ipsum</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+            </ul>
+        </div> 
+        <div class="profile-2 container text-center"> 
+            <ul class="horizontal-list" style="margin-top: 20px">
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Smith Storng</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">King Rose</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Jhon Smith</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+            </ul>
+        </div>                       
+    </div>
+</div>
+
+
+
+
+@include('layouts.footer')

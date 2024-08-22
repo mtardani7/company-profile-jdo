@@ -26,4 +26,4 @@
     </button>
 </div>
 @endsection
-@include('layouts.footer')
+@include('layouts.footer')  

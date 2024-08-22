@@ -17,7 +17,7 @@
       <div class="row align-items-center">
         <div class="col d-flex flex-column align-items-start">
           <div class="logo-footer mb-3">
-            <img src="{{ asset('assets/images/logo.jpg') }}" alt="Rapid Plast Logo" style="height: 120px;">
+            <img src="{{ asset('assets/image/logo.png') }}" alt="Logo" style="width: 170px;">
           </div>
           <h6>Menjadi Penyedia Solusi Total 
               Terkemuka di ASIA untuk Kemasan dan Plastik yang Inovatif, Ramah Lingkungan, dan Berteknologi Mutakhir

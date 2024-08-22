@@ -10,8 +10,8 @@
     <nav class="navbar">
         <img src="{{ asset('assets/image/logo.png') }}" alt="Logo">
         <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="{{ url('/')}}" class="active">Home</a></li>
+            <li><a href="{{ url('/about_us')}}">About Us</a></li>
             <li><a href="#">Product</a></li>
             <li><a href="#">Address</a></li>
         </ul>

@@ -1,4 +1,4 @@
-@extends('layouts.navbar')
+@include('layouts.navbar')
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
@@ -120,5 +120,6 @@
             </div>
         </div>
     </div>
+
 
 @include('layouts.footer')

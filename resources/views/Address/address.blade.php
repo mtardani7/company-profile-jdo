@@ -31,11 +31,12 @@
                     </div>
                     <div>
                         <h5>REGISTERED OFFICE</h5>
-                        <p><i class="bi bi-geo-alt-fill"></i> SUBHAAG, B-15-16 Rahim Prak, old Padra Road, Baroda - 390 105, Gujarat (INDIA)</p>
-                        <p><i class="bi bi-telephone-fill"></i> +91 265 2312803</p>
-                        <p><i class="bi bi-envelope-fill"></i> info@jewelbrushes.com</p>
-                        <p><i class="bi bi-globe"></i> www.jewelbrushes.com</p>
+                        <p><i class="bi bi-geo-alt-fill"></i> <a href="75M7+PPX, Hira Nagar, Tandalja, Vadodara, Gujarat 390012, India"> SUBHAAG, B-15-16 Rahim Prak, Old Padra Road, Baroda - 390 105, Gujarat (INDIA)</a></p>
+                        <p><i class="bi bi-telephone-fill"></i> <a href="tel:+912652312803">+91 265 2312803</a></p>
+                        <p><i class="bi bi-envelope-fill"></i> <a href="mailto:info@jewelbrushes.com">info@jewelbrushes.com</a></p>
+                        <p><i class="bi bi-globe"></i> <a href="http://www.jewelbrushes.com" target="_blank">www.jewelbrushes.com</a></p>
                     </div>
+
                 </div>
 
                 <!-- FACTORY -->
@@ -45,10 +46,11 @@
                     </div>
                     <div>
                         <h5>FACTORY</h5>
-                        <p><i class="bi bi-geo-alt-fill"></i> JI. Berbek Industri V No.21, Bebek, Berbek, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256</p>
-                        <p><i class="bi bi-telephone-fill"></i> +62 822 9811 5885</p>
-                        <p><i class="bi bi-envelope-fill"></i> jeweldyna.oralcare@gmail.com</p>
+                        <p><i class="bi bi-geo-alt-fill"></i> <a href="Jl. Berbek Industri V No.21, Bebek, Berbek, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256"> JI. Berbek Industri V No.21, Bebek, Berbek, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256</a></p>
+                        <p><i class="bi bi-telephone-fill"></i> <a href="tel:+6282298115885">+62 822 9811 5885</a></p>
+                        <p><i class="bi bi-envelope-fill"></i> <a href="mailto:jeweldyna.oralcare@gmail.com">jeweldyna.oralcare@gmail.com</a></p>
                     </div>
+
                 </div>
             </div>
         </div>

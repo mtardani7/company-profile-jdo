@@ -13,7 +13,7 @@
             <li><a href="{{ url('/')}}" class="active">Home</a></li>
             <li><a href="{{ url('/about_us')}}">About Us</a></li>
             <li><a href="#">Product</a></li>
-            <li><a href="#">Address</a></li>
+            <li><a href="{{ url('/address')}}">Address</a></li>
         </ul>
     </nav>
 </body>

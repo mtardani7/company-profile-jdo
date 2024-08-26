@@ -8,29 +8,29 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/about_us.css') }}">
 
-<img src="{{ asset('assets/image/about_us.png') }}" alt="background" style="width: 1280px">
+<img src="{{ asset('assets/image/about_us.png') }}" alt="background" style="width: 100%; max-width: 1280px; height: auto;">
 
 <div class="teks">
     <h1>Our Story</h1>
-    <img src="{{ asset('assets/image/kerja_sama.jpeg')}}" alt="kerja_sama" style="margin-left: 230px; width: 845px;">
+    <img src="{{ asset('assets/image/kerja_sama.jpeg')}}" alt="kerja_sama" class="img-fluid mx-auto d-block" style="max-width: 100%; width: 845px;">
 </div>
 
 <div class="card-about container text-center">
     <div class="row align-items-center">
-        <div class="col-md-6">
-            <div class="card text-start" style="border-radius: 10px">
+        <div class="col-12 col-md-6 mb-4">
+            <div class="card text-start" style="border-radius: 10px; overflow: hidden;">
                 <div class="card-body">
-                    <p class="card-text">
+                    <p class="card-text" style="word-wrap: break-word; overflow-wrap: break-word; hyphens: auto; font-size: 22px;">
                         Established in 2019, PT Jewel Dyna Oralcare (“JDO”) is a joint venture company of Dynapack Asia Pte Ltd (Singapore) (“Dynapack”) and Jewel Consumer Care Co. Ltd (India) (“JCC”)
                     </p>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="card text-start" style="border-radius: 10px">
+        <div class="col-12 col-md-6 mb-4">
+            <div class="card text-start" style="border-radius: 10px; overflow: hidden;">
                 <div class="card-body">
                     <h4 class="card-title">Mission:</h4>
-                    <p class="card-text">
+                    <p class="card-text" style="word-wrap: break-word; overflow-wrap: break-word; hyphens: auto;">
                         “To become the leading partner in providing plastic oral care solutions for our customers in Indonesia”
                     </p>
                 </div>
@@ -46,7 +46,7 @@
 <div class="jawel-da container text-center">
     <div class="row align-items-center">
       <div class="col">
-        <img src="{{ asset('assets/image/jawel.png')}}" alt="kerja_sama" style="margin-right: 70px; width: 260px; height: 160">
+        <img src="{{ asset('assets/image/jawel.png')}}" alt="kerja_sama" style="margin-right: 70px; width: 260px; height: 160; margin-bottom: 20px">
       </div>
       <div class="col">
         <div class="card text-start" style="border-radius: 10px">
@@ -92,7 +92,7 @@
         </div>
       </div>
       <div class="col">
-        <img src="{{ asset('assets/image/dynapack_asia.png')}}" alt="kerja_sama" style="margin-left: 70px; width: 260px; height: 160">
+        <img src="{{ asset('assets/image/dynapack_asia.png')}}" alt="kerja_sama" style="margin-left: 70px; width: 260px; height: 160; margin-top: 20px">
       </div>
     </div>
 </div>
@@ -101,68 +101,109 @@
     <h1>Management Team</h1>
 </div>
 
-<div class="card-body-profile">
-    <div class="card-body2">
-        <div class="profile-1 container text-center" style="margin-top: 250px"> 
-            <ul class="horizontal-list">
-                <li>
-                    <div class="img-container">
+<div class="container">
+    <div class="card-body-profile">
+        <div class="card-body2">
+            <div class="profile-1 container text-center" style="margin-top: 250px"> 
+                {{-- <div class="container text-center">
+                    <div class="row align-items-start">
+                      <div class="col-md-4 px-2">
                         <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">Loe Leo</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="img-container">
+                            <h4 class="img-caption">Loe Leo</h4>
+                            <p style="color: black; margin-bottom: 0;">Posisi</p>
+                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                      </div>
+                      <div class="col-md-4 px-2">
                         <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">Rusher</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="img-container">
+                            <h4 class="img-caption">Loe Leo</h4>
+                            <p style="color: black; margin-bottom: 0;">Posisi</p>
+                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                      </div>
+                      <div class="col-md-4 px-2">
                         <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">Lorem Ipsum</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                            <h4 class="img-caption">Loe Leo</h4>
+                            <p style="color: black; margin-bottom: 0;">Posisi</p>
+                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                      </div>
                     </div>
-                </li>
-            </ul>
-        </div> 
-        <div class="profile-2 container text-center"> 
-            <ul class="horizontal-list" style="margin-top: 20px">
-                <li>
-                    <div class="img-container">
-                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">Smith Storng</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                  </div> --}}
+                <ul class="horizontal-list">
+                    <li>
+                        <div class="img-container">
+                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                            <h4 class="img-caption">Loe Leo</h4>
+                            <p style="color: black; margin-bottom: 0;">Posisi</p>
+                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                            <h4 class="img-caption">Rusher</h4>
+                            <p style="color: black; margin-bottom: 0;">Posisi</p>
+                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                            <h4 class="img-caption">Lorem Ipsum</h4>
+                            <p style="color: black; margin-bottom: 0;">Posisi</p>
+                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+            <div class="profile-2 container text-center"> 
+                {{-- <div class="row align-items-start">
+                    <div class="col-md-4 px-2">
+                      <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                          <h4 class="img-caption">Loe Leo</h4>
+                          <p style="color: black; margin-bottom: 0;">Posisi</p>
+                          <p style="color: black; margin-top: -5px;">Pengalaman</p>
                     </div>
-                </li>
-                <li>
-                    <div class="img-container">
-                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">King Rose</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    <div class="col-md-4 px-2">
+                      <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                          <h4 class="img-caption">Loe Leo</h4>
+                          <p style="color: black; margin-bottom: 0;">Posisi</p>
+                          <p style="color: black; margin-top: -5px;">Pengalaman</p>
                     </div>
-                </li>
-                <li>
-                    <div class="img-container">
-                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">Jhon Smith</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    <div class="col-md-4 px-2">
+                      <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                          <h4 class="img-caption">Loe Leo</h4>
+                          <p style="color: black; margin-bottom: 0;">Posisi</p>
+                          <p style="color: black; margin-top: -5px;">Pengalaman</p>
                     </div>
-                </li>
-            </ul>
-        </div>                       
+                  </div> --}}
+                <ul class="horizontal-list" style="margin-top: 20px">
+                    <li>
+                        <div class="img-container">
+                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                            <h4 class="img-caption">Smith Storng</h4>
+                            <p style="color: black; margin-bottom: 0;">Posisi</p>
+                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                            <h4 class="img-caption">King Rose</h4>
+                            <p style="color: black; margin-bottom: 0;">Posisi</p>
+                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                            <h4 class="img-caption">Jhon Smith</h4>
+                            <p style="color: black; margin-bottom: 0;">Posisi</p>
+                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>                       
+        </div>
     </div>
 </div>
-
-
-
 
 @include('layouts.footer')

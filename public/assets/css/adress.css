@@ -1,0 +1,18 @@
+    .address-container{
+        height: 600px;
+        width: 1395px;
+    }
+
+    .kotak-body{
+        background-color: #D9D9D9;
+        border-radius: 10px;
+        height: 250px;
+        padding: 20px;
+    }
+    .office-info{
+        color: black;
+    }
+    .factory-info{
+        color: black;
+    }
+    

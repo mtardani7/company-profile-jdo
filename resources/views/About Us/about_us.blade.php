@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/about_us.css') }}">
 
-<img src="{{ asset('assets/image/about_us.png') }}" alt="background" style="width: 100%; max-width: 1280px; height: auto;">
+<img src="{{ asset('assets/image/AboutUs/about_us.png') }}" alt="background" style="width: 1280px">
 
 <div class="teks">
     <h1>Our Story</h1>
@@ -46,7 +46,7 @@
 <div class="jawel-da container text-center">
     <div class="row align-items-center">
       <div class="col">
-        <img src="{{ asset('assets/image/jawel.png')}}" alt="kerja_sama" style="margin-right: 70px; width: 260px; height: 160; margin-bottom: 20px">
+        <img src="{{ asset('assets/image/AboutUs/jawel.png')}}" alt="kerja_sama" style="margin-right: 70px; width: 260px; height: 160">
       </div>
       <div class="col">
         <div class="card text-start" style="border-radius: 10px">
@@ -92,7 +92,7 @@
         </div>
       </div>
       <div class="col">
-        <img src="{{ asset('assets/image/dynapack_asia.png')}}" alt="kerja_sama" style="margin-left: 70px; width: 260px; height: 160; margin-top: 20px">
+        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png')}}" alt="kerja_sama" style="margin-left: 70px; width: 260px; height: 160">
       </div>
     </div>
 </div>
@@ -100,67 +100,64 @@
 <div class="teks">
     <h1>Management Team</h1>
 </div>
-
-<div class="container">
-    <div class="card-body-profile">
-        <div class="card-body2">
-            <div class="profile-1 container text-center" style="margin-top: 250px"> 
-                <ul class="horizontal-list">
-                    <li>
-                        <div class="img-container">
-                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                            <h4 class="img-caption">Loe Leo</h4>
-                            <p style="color: black; margin-bottom: 0;">Posisi</p>
-                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="img-container">
-                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                            <h4 class="img-caption">Rusher</h4>
-                            <p style="color: black; margin-bottom: 0;">Posisi</p>
-                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="img-container">
-                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                            <h4 class="img-caption">Lorem Ipsum</h4>
-                            <p style="color: black; margin-bottom: 0;">Posisi</p>
-                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                        </div>
-                    </li>
-                </ul>
-            </div> 
-            <div class="profile-2 container text-center"> 
-                <ul class="horizontal-list" style="margin-top: 20px">
-                    <li>
-                        <div class="img-container">
-                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                            <h4 class="img-caption">Smith Storng</h4>
-                            <p style="color: black; margin-bottom: 0;">Posisi</p>
-                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="img-container">
-                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                            <h4 class="img-caption">King Rose</h4>
-                            <p style="color: black; margin-bottom: 0;">Posisi</p>
-                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="img-container">
-                            <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                            <h4 class="img-caption">Jhon Smith</h4>
-                            <p style="color: black; margin-bottom: 0;">Posisi</p>
-                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>                       
-        </div>
+<div class="card-body-profile">
+    <div class="card-body2">
+        <div class="profile-1 container text-center" style="margin-top: 250px"> 
+            <ul class="horizontal-list">
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Loe Leo</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Rusher</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Lorem Ipsum</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+            </ul>
+        </div> 
+        <div class="profile-2 container text-center"> 
+            <ul class="horizontal-list" style="margin-top: 20px">
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Smith Storng</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">King Rose</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-container">
+                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Jhon Smith</h4>
+                        <p style="color: black; margin-bottom: 0;">Posisi</p>
+                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                    </div>
+                </li>
+            </ul>
+        </div>                       
     </div>
 </div>
 

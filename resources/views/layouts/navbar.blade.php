@@ -6,15 +6,21 @@
     <title>Navbar Example</title>
     <link rel="stylesheet" href="{{ asset('assets/css/navbar.css') }}">
 </head>
+
 <body>
-    <nav class="navbar">
+    <nav class="navbar" style="position: fixed;">
         <img src="{{ asset('assets/image/logo.png') }}" alt="Logo">
         <ul>
-            <li><a href="{{ url('/')}}" class="active">Home</a></li>
-            <li><a href="{{ url('/about_us')}}">About Us</a></li>
-            <li><a href="{{ url('/product')}}">Product</a></li>
-            <li><a href="#">Address</a></li>
+            <li><a href="{{ url('/') }}" class="{{ request()->is('/') ? 'active' : '' }}">Home</a></li>
+            <li><a href="{{ url('/about_us') }}" class="{{ request()->is('about_us') ? 'active' : '' }}">About Us</a> </li>
+            <li><a href="#">Product</a></li>
+            <li><a href="{{ url('/address')}}">Address</a></li>
         </ul>
     </nav>
+
+    <div class="content">
+        @yield('content')
+    </div>
 </body>
+
 </html>

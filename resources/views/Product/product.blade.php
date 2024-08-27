@@ -10,7 +10,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
-<img src="{{ asset('assets/image/product.png') }}" alt="background" style="width: 100%; max-width: 1280px; height: auto;">
+<img src="{{ asset('assets/image/Product/product.png') }}" alt="background" style="width: 100%; max-width: 1280px; height: auto;">
 
 <div class="text">
     <h1>Product</h1>
@@ -79,10 +79,10 @@
                 <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">Manual</h3>
                 <div class="carousel-inner">
                     <div class="carousel-item active" id="image9">
-                        <img src="/assets/image/about_us.png" class="d-block w-100 h-100" alt="...">
+                        <img src="/assets/image/Product/PP WHITE 1.jpg" class="d-block w-100 h-100" alt="...">
                     </div>
                     <div class="carousel-item" id="image10">
-                        <img src="/assets/image/addrres.png" class="d-block w-100 h-100" alt="...">
+                        <img src="/assets/image/Product/PP WHITE 2.jpg" class="d-block w-100 h-100" alt="...">
                     </div>
                     <div class="carousel-item" id="image11">
                         <img src="/assets/image/dynapack_asia.png" class="d-block w-100 h-100" alt="...">

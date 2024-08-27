@@ -19,12 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Home.home');
 });
-
 Route::get('/about_us', [AboutUsController::class, 'about_us']);
 Route::get('/product', [ProductController::class, 'product']);
 Route::get('/address', [AdressController::class, 'address']);
-
-// Route::get('/address', function () {
-//     return view('Address.address');
-// });
-

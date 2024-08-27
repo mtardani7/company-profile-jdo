@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\LoginAdminController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,6 @@ Route::get('/', function () {
 
 Route::get('/about_us', [AboutUsController::class, 'about_us']);
 Route::get('/product', [ProductController::class, 'product']);
+
+//Admin
+Route::get('/login_admin', [LoginAdminController::class, 'index']);

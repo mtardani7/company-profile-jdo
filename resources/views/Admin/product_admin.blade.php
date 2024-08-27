@@ -26,7 +26,7 @@
         <h3 style="color: white; font-weight: bold;">Product</h3>
       </div>
       <div class="col">
-        <button type="button" class="btn btn-light"><i class="bi bi-plus"></i>Create</button>
+        <button type="button" class="btn btn-light"><i class="bi bi-plus"></i><a href="{{ url('/tambah_product')}}" style="text-decoration: none; color: black;">Create</a></button>
       </div>
     </div>
   </div>

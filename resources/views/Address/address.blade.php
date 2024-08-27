@@ -15,7 +15,7 @@
 
 
 
-<img src="{{ asset('assets/image/addrres.png') }}" alt="background" style="width: 1500px">
+<img src="{{asset('assets/image/Address/addrres.png')}}" alt="background" style="width: 1500px">
 
 <!-- <div class="address-container">
     <img src="{{ asset('assets/image/address.png') }}" alt="background" class="address-background"> -->
@@ -30,46 +30,46 @@
                         <i class="bi bi-building-fill-gear" style="font-size: 2rem;"></i>
                     </div>
                     <div>
-    <h5>REGISTERED OFFICE</h5>
-    <p><i class="bi bi-geo-alt-fill"></i> 
-        <a href="https://www.google.com/maps?q=75M7+PPX,+Hira+Nagar,+Tandalja,+Vadodara,+Gujarat+390012,+India" 
-           style="color: black; text-decoration: none;"> 
-           SUBHAAG, B-15-16 Rahim Prak, Old Padra Road, Baroda - 390 105, Gujarat (INDIA)
-        </a>
-    </p>
-    <p><i class="bi bi-telephone-fill"></i> 
-        <a href="tel:+912652312803" style="color: black; text-decoration: none;">+91 265 2312803</a>
-    </p>
-    <p><i class="bi bi-envelope-fill"></i> 
-        <a href="mailto:info@jewelbrushes.com" style="color: black; text-decoration: none;">info@jewelbrushes.com</a>
-    </p>
-    <p><i class="bi bi-globe"></i> 
-        <a href="http://www.jewelbrushes.com" target="_blank" style="color: black; text-decoration: none;">www.jewelbrushes.com</a>
-    </p>
-</div>
+                    <h5>REGISTERED OFFICE</h5>
+                    <p><i class="bi bi-geo-alt-fill"></i> 
+                        <a href="https://www.google.com/maps?q=75M7+PPX,+Hira+Nagar,+Tandalja,+Vadodara,+Gujarat+390012,+India" 
+                        style="color: black; text-decoration: none;"> 
+                        SUBHAAG, B-15-16 Rahim Prak, Old Padra Road, Baroda - 390 105, Gujarat (INDIA)
+                        </a>
+                    </p>
+                    <p><i class="bi bi-telephone-fill"></i> 
+                        <a href="tel:+912652312803" style="color: black; text-decoration: none;">+91 265 2312803</a>
+                    </p>
+                    <p><i class="bi bi-envelope-fill"></i> 
+                        <a href="mailto:info@jewelbrushes.com" style="color: black; text-decoration: none;">info@jewelbrushes.com</a>
+                    </p>
+                    <p><i class="bi bi-globe"></i> 
+                        <a href="http://www.jewelbrushes.com" target="_blank" style="color: black; text-decoration: none;">www.jewelbrushes.com</a>
+                    </p>
+                </div>
 
 
                 </div>
 
                 <!-- FACTORY -->
                 <div class="factory-info d-flex align-items-start" style="flex-grow: 1;">
-    <div class="icon-box p-2 me-3" style="background-color: #808000;">
-        <i class="bi bi-ethernet" style="font-size: 2rem;"></i>
-    </div>
-    <div>
-        <h5>FACTORY</h5>
-        <p><i class="bi bi-geo-alt-fill"></i> 
-            <a href="https://www.google.com/maps?q=Jl.+Berbek+Industri+V+No.21,+Bebek,+Berbek,+Kec.+Waru,+Kabupaten+Sidoarjo,+Jawa+Timur+61256" 
-               style="color: black; text-decoration: none;">
-               JI. Berbek Industri V No.21, Bebek, Berbek, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256
-            </a>
-        </p>
-        <p><i class="bi bi-telephone-fill"></i> 
-            <a href="tel:+6282298115885" style="color: black; text-decoration: none;">+62 822 9811 5885</a>
-        </p>
-        <p><i class="bi bi-envelope-fill"></i> 
-            <a href="mailto:jeweldyna.oralcare@gmail.com" style="color: black; text-decoration: none;">jeweldyna.oralcare@gmail.com</a>
-        </p>
+                <div class="icon-box p-2 me-3" style="background-color: #808000;">
+                    <i class="bi bi-ethernet" style="font-size: 2rem;"></i>
+                </div>
+                <div>
+                    <h5>FACTORY</h5>
+                    <p><i class="bi bi-geo-alt-fill"></i> 
+                        <a href="https://www.google.com/maps?q=Jl.+Berbek+Industri+V+No.21,+Bebek,+Berbek,+Kec.+Waru,+Kabupaten+Sidoarjo,+Jawa+Timur+61256" 
+                        style="color: black; text-decoration: none;">
+                        JI. Berbek Industri V No.21, Bebek, Berbek, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256
+                        </a>
+                    </p>
+                    <p><i class="bi bi-telephone-fill"></i> 
+                        <a href="tel:+6282298115885" style="color: black; text-decoration: none;">+62 822 9811 5885</a>
+                    </p>
+                    <p><i class="bi bi-envelope-fill"></i> 
+                        <a href="mailto:jeweldyna.oralcare@gmail.com" style="color: black; text-decoration: none;">jeweldyna.oralcare@gmail.com</a>
+                    </p>
     </div>
 </div>
 

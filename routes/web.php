@@ -27,6 +27,7 @@ Route::get('/address', [AdressController::class, 'address']);
 
 
 //Admin
+Route::get('/admin', [LoginAdminController::class, 'admin']);
 Route::get('/login_admin', [LoginAdminController::class, 'index']);
 Route::get('/product_admin', [ProductAdminController::class, 'index']);
 

@@ -12,25 +12,25 @@
 
 <div class="teks">
     <h1>Our Story</h1>
-    <img src="{{ asset('assets/image/kerja_sama.jpeg')}}" alt="kerja_sama" style="margin-left: 230px; width: 845px;">
+    <img src="{{ asset('assets/image/kerja_sama.jpeg')}}" alt="kerja_sama" class="img-fluid mx-auto d-block" style="max-width: 100%; width: 845px;">
 </div>
 
 <div class="card-about container text-center">
     <div class="row align-items-center">
-        <div class="col-md-6">
-            <div class="card text-start" style="border-radius: 10px">
+        <div class="col-12 col-md-6 mb-4">
+            <div class="card text-start" style="border-radius: 10px; overflow: hidden;">
                 <div class="card-body">
-                    <p class="card-text">
+                    <p class="card-text" style="word-wrap: break-word; overflow-wrap: break-word; hyphens: auto; font-size: 22px;">
                         Established in 2019, PT Jewel Dyna Oralcare (“JDO”) is a joint venture company of Dynapack Asia Pte Ltd (Singapore) (“Dynapack”) and Jewel Consumer Care Co. Ltd (India) (“JCC”)
                     </p>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="card text-start" style="border-radius: 10px">
+        <div class="col-12 col-md-6 mb-4">
+            <div class="card text-start" style="border-radius: 10px; overflow: hidden;">
                 <div class="card-body">
                     <h4 class="card-title">Mission:</h4>
-                    <p class="card-text">
+                    <p class="card-text" style="word-wrap: break-word; overflow-wrap: break-word; hyphens: auto;">
                         “To become the leading partner in providing plastic oral care solutions for our customers in Indonesia”
                     </p>
                 </div>
@@ -100,7 +100,6 @@
 <div class="teks">
     <h1>Management Team</h1>
 </div>
-
 <div class="card-body-profile">
     <div class="card-body2">
         <div class="profile-1 container text-center" style="margin-top: 250px"> 
@@ -161,6 +160,5 @@
         </div>                       
     </div>
 </div>
-
 
 @include('layouts.footer')

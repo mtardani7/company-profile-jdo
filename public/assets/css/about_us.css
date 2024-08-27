@@ -31,7 +31,7 @@ h1 {
 .card-jawel {
     background-color: #EEF1F1;
     color: black;
-    height: 185px;
+    height: 220px;
 }
 
 .card-body-profile {
@@ -92,4 +92,8 @@ h1 {
 
 .profile-1, .profile-2 h4{
     color: orange;
+}
+
+.container .card-body-profile{
+    margin-left: -55px;
 }

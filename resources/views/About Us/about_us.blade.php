@@ -105,28 +105,6 @@
     <div class="card-body-profile">
         <div class="card-body2">
             <div class="profile-1 container text-center" style="margin-top: 250px"> 
-                {{-- <div class="container text-center">
-                    <div class="row align-items-start">
-                      <div class="col-md-4 px-2">
-                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                            <h4 class="img-caption">Loe Leo</h4>
-                            <p style="color: black; margin-bottom: 0;">Posisi</p>
-                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                      </div>
-                      <div class="col-md-4 px-2">
-                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                            <h4 class="img-caption">Loe Leo</h4>
-                            <p style="color: black; margin-bottom: 0;">Posisi</p>
-                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                      </div>
-                      <div class="col-md-4 px-2">
-                        <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                            <h4 class="img-caption">Loe Leo</h4>
-                            <p style="color: black; margin-bottom: 0;">Posisi</p>
-                            <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                      </div>
-                    </div>
-                  </div> --}}
                 <ul class="horizontal-list">
                     <li>
                         <div class="img-container">
@@ -155,26 +133,6 @@
                 </ul>
             </div> 
             <div class="profile-2 container text-center"> 
-                {{-- <div class="row align-items-start">
-                    <div class="col-md-4 px-2">
-                      <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                          <h4 class="img-caption">Loe Leo</h4>
-                          <p style="color: black; margin-bottom: 0;">Posisi</p>
-                          <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                    </div>
-                    <div class="col-md-4 px-2">
-                      <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                          <h4 class="img-caption">Loe Leo</h4>
-                          <p style="color: black; margin-bottom: 0;">Posisi</p>
-                          <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                    </div>
-                    <div class="col-md-4 px-2">
-                      <img src="{{ asset('assets/image/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                          <h4 class="img-caption">Loe Leo</h4>
-                          <p style="color: black; margin-bottom: 0;">Posisi</p>
-                          <p style="color: black; margin-top: -5px;">Pengalaman</p>
-                    </div>
-                  </div> --}}
                 <ul class="horizontal-list" style="margin-top: 20px">
                     <li>
                         <div class="img-container">

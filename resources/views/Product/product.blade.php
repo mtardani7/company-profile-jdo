@@ -79,10 +79,10 @@
                 <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">Manual</h3>
                 <div class="carousel-inner">
                     <div class="carousel-item active" id="image9">
-                        <img src="/assets/image/Product/PP WHITE 1.jpg" class="d-block w-100 h-100" alt="...">
+                        <img src="/assets/image/Product/PP WHITE 1.jpg" class="d-block w-80 h-90" alt="...">
                     </div>
                     <div class="carousel-item" id="image10">
-                        <img src="/assets/image/Product/PP WHITE 2.jpg" class="d-block w-100 h-100" alt="...">
+                        <img src="/assets/image/Product/PP WHITE 2.jpg" class="d-block w-80 h-90" alt="...">
                     </div>
                     <div class="carousel-item" id="image11">
                         <img src="/assets/image/dynapack_asia.png" class="d-block w-100 h-100" alt="...">
@@ -128,6 +128,9 @@
 
 <div class="text">
     <h1>Our Customer</h1>
+    <div class="image-container">
+        <img src="{{ asset('assets/image/Product/pepsoden.png') }}" class="d-block w-20 h-20" alt="Pepsoden">
+    </div>
 </div>
 
 @include('layouts.footer')

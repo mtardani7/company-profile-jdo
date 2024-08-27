@@ -37,6 +37,10 @@
         <div class="col">
             <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                 <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">Kids</h3>
+                <div class="position-absolute" style="top: 0; right: -590px; padding-right: 20px;">
+                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                    <button type="button" class="btn btn-warning btn-sm">Update</button>
+                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" id="image1">
                         <img src="/assets/image/about_us.png" class="d-block w-100 h-100" alt="...">
@@ -92,6 +96,10 @@
         <div class="col">
             <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                 <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">Manual</h3>
+                <div class="position-absolute" style="top: 0; right: -590px; padding-right: 20px;">
+                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                    <button type="button" class="btn btn-warning btn-sm">Update</button>
+                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" id="image9">
                         <img src="/assets/image/about_us.png" class="d-block w-100 h-100" alt="...">

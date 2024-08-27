@@ -2,36 +2,51 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1a3a5d; /* Navy blue */
+    background-color: #1a3a5d;
     padding: 10px 20px;
+    width: 100%; 
+    top: 0;
+    z-index: 1000;
 }
+
 .navbar img {
     height: 50px;
 }
+
 .navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
+
 .navbar ul li {
     margin-left: 30px;
 }
+
 .navbar ul li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
     padding: 5px 10px;
     position: relative;
+    transition: font-weight 0.3s ease;
 }
+
 .navbar ul li a:hover,
 .navbar ul li a.active {
     font-weight: bold;
 }
+
 .navbar ul li a.active::after {
     content: "";
     position: absolute;
@@ -41,4 +56,8 @@ body {
     height: 3px;
     background-color: white;
     border-radius: 2px;
+}
+
+main {
+    padding-top: 70px; /* Menambahkan jarak untuk konten agar tidak tertutup navbar */
 }

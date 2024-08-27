@@ -1,3 +1,7 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+    
     .address-container{
         height: 600px;
         width: 1395px;

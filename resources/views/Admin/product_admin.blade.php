@@ -14,24 +14,24 @@
     <img src="{{ asset('assets/image/Product/product.png') }}" alt="background"
         style="width: 100%; max-width: 1280px; height: auto;">
 
-    <div class="container-fluid text-center add_product">
-        <div class="row align-items-start">
-            <div class="col">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
-                    <span class="input-group-text">
-                        <i class="bi bi-search"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="col">
-                <h3 style="color: white; font-weight: bold;">Product</h3>
-            </div>
-            <div class="col">
-                <button type="button" class="btn btn-light"><i class="bi bi-plus"></i>Create</button>
-            </div>
+<div class="container-fluid text-center add_product">
+    <div class="row align-items-start">
+      <div class="col">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+            <span class="input-group-text">
+                <i class="bi bi-search"></i> 
+            </span>
         </div>
+      </div>
+      <div class="col">
+        <h3 style="color: white; font-weight: bold;">Product</h3>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-light"><i class="bi bi-plus"></i><a href="{{ url('/tambah_product')}}" style="text-decoration: none; color: black;">Create</a></button>
+      </div>
     </div>
+  </div>
 
     <!--Kids -->
     <div class="container-fluid text-start">

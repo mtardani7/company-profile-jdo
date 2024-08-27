@@ -1,0 +1,19 @@
+body::-webkit-scrollbar {
+    display: none;
+} 
+
+.teks h2{
+    text-align: center;
+    padding-top: 90px;
+    color: black;
+    font-weight: bold;
+}
+
+.form{
+    color: black;
+}
+
+.form-input {
+    width: 645px;
+    border: 1px solid black;
+}

@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" href="{{ asset('assets/css/about_us.css') }}">
 
-<img src="{{ asset('assets/image/AboutUs/about_us.png') }}" alt="background" style="width: 1280px">
+<img src="{{ asset('assets/image/AboutUs/about_us.png') }}" alt="background" style="width: 1280px; padding-top: 65px;">
 
 <div class="teks">
     <h1>Our Story</h1>

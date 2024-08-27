@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\LoginAdminController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AdressController;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,6 @@ Route::get('/', function () {
 Route::get('/about_us', [AboutUsController::class, 'about_us']);
 Route::get('/product', [ProductController::class, 'product']);
 Route::get('/address', [AdressController::class, 'address']);
+
+Route::get('/login_admin', [LoginAdminController::class, 'index']);
+

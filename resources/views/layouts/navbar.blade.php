@@ -14,7 +14,7 @@
             <li><a href="{{ url('/') }}" class="{{ request()->is('/') ? 'active' : '' }}">Home</a></li>
             <li><a href="{{ url('/about_us') }}" class="{{ request()->is('about_us') ? 'active' : '' }}">About Us</a> </li>
             <li><a href="#">Product</a></li>
-            <li><a href="#">Address</a></li>
+            <li><a href="{{ url('/address')}}">Address</a></li>
         </ul>
     </nav>
 

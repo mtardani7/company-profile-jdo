@@ -25,7 +25,5 @@ Route::get('/about_us', [AboutUsController::class, 'about_us']);
 Route::get('/product', [ProductController::class, 'product']);
 Route::get('/address', [AdressController::class, 'address']);
 
-// Route::get('/address', function () {
-//     return view('Address.address');
-// });
+Route::get('/login_admin', [LoginAdminController::class, 'index']);
 

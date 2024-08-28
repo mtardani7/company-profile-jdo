@@ -26,7 +26,7 @@
         <h3 style="color: white; font-weight: bold;">Product</h3>
       </div>
       <div class="col">
-        <button type="button" class="btn btn-light"><i class="bi bi-plus"></i><a href="{{ url('/tambah_product')}}" style="text-decoration: none; color: black;">Create</a></button>
+        <button type="button" class="btn btn-light"><i class="bi bi-plus-circle" style="margin-right: 5px;"></i></i><a href="{{ url('/tambah_product')}}" style="text-decoration: none; color: black;">Create</a></button>
       </div>
     </div>
   </div>
@@ -38,8 +38,8 @@
             <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                 <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">Kids</h3>
                 <div class="position-absolute" style="top: 0; right: -590px; padding-right: 20px;">
-                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
-                    <button type="button" class="btn btn-warning btn-sm">Update</button>
+                    <button type="button" class="btn btn-danger btn-sm" style="height: 36px;"><i class="bi bi-trash3-fill" style="margin-right: 5px;"></i>Delete</button>
+                    <button type="button" class="btn btn-primary"><i class="bi bi-gear-fill" style="margin-right: 5px;"></i><a href="{{ url('/update_product')}}" style="text-decoration: none; color: white;">Update</a></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" id="image1">
@@ -97,8 +97,8 @@
             <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                 <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">Manual</h3>
                 <div class="position-absolute" style="top: 0; right: -590px; padding-right: 20px;">
-                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
-                    <button type="button" class="btn btn-warning btn-sm">Update</button>
+                    <button type="button" class="btn btn-danger btn-sm" style="height: 36px;"><i class="bi bi-trash3-fill" style="margin-right: 5px;"></i>Delete</button>
+                    <button type="button" class="btn btn-primary"><i class="bi bi-gear-fill" style="margin-right: 5px;"></i><a href="{{ url('/update_product')}}" style="text-decoration: none; color: white;">Update</a></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" id="image9">

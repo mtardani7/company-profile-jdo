@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AdressController;
 use App\Http\Controllers\ProductAdminController;
 use App\Http\Controllers\TambahProductController;
+use App\Http\Controllers\UpdateProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,4 +33,5 @@ Route::get('/address', [AdressController::class, 'address']);
 Route::get('/login_admin', [LoginAdminController::class, 'index']);
 Route::get('/product_admin', [ProductAdminController::class, 'index']);
 Route::get('/tambah_product', [TambahProductController::class, 'index']);
+Route::get('/update_product', [UpdateProductController::class, 'index']);
 

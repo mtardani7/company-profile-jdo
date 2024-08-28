@@ -1,7 +1,7 @@
 @include('layouts.navbar');
 
 @section('title')
-    Create
+    Update
 @endsection
 
 <link rel="stylesheet" href="{{ asset('assets/css/admin/tambah_product.css') }}">
@@ -10,7 +10,7 @@
 @section('content')
 
 <div class="teks">
-    <h2>Create Product</h2>
+    <h2>Update Product</h2>
 </div>
 
 <div class="form" style="margin-left: 325px; margin-top: 30px;">

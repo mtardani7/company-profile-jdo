@@ -44,7 +44,10 @@
             </div>
         </div>
     </div>
-    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn_tambah">Simpan</button>
+    <div class="text">
+        <p style="padding-left: 220px; font-weight: bold; font-size: 30px; padding-top: 60px;">Our Customer</p>
+    </div>
 </div>
 
 @include('layouts.footer')

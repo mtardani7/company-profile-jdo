@@ -17,3 +17,12 @@ body::-webkit-scrollbar {
     width: 645px;
     border: 1px solid black;
 }
+
+.btn_tambah {
+    margin-left: 265px;
+    background-color: #152D47;
+    color: white;
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+}

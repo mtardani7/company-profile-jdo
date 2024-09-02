@@ -26,7 +26,7 @@
         <h3 style="color: white; font-weight: bold;">Product</h3>
       </div>
       <div class="col">
-        <button type="button" class="btn btn-light"><i class="bi bi-plus-circle" style="margin-right: 5px;"></i></i><a href="{{ url('/tambah_product')}}" style="text-decoration: none; color: black;">Create</a></button>
+        <button type="button" class="btn btn-secondary"><i class="bi bi-tools" style="margin-right: 5px;"></i><a href="{{ url('/tambah_product')}}" style="text-decoration: none; color: white;">Create</a></button>
       </div>
     </div>
   </div>
@@ -164,7 +164,7 @@
             title: 'T41',
             description: [
                 'Pegangan ibu jari untuk kontrol yang lebih baik',
-                'Pegangan 2 komponen – PP + TPE',
+                'Pegangan 2 komponen - PP + TPE',
                 'Profil bulu berpotongan datar'
             ]
         },

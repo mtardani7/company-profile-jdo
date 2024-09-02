@@ -34,3 +34,12 @@ body::-webkit-scrollbar {
     background-color: #1A4870;
     height: 100px;
 }
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}

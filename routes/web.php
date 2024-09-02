@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AdressController;
 use App\Http\Controllers\ProductAdminController;
 use App\Http\Controllers\TambahProductController;
+use App\Http\Controllers\UpdateProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,3 +41,4 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/product/admin', [LoginAdminController::class, 'product']);
     Route::get('/address/admin', [LoginAdminController::class, 'address']);
 });
+

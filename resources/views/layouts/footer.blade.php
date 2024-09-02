@@ -43,7 +43,7 @@
                         <div class="contact-info">
                             <p><i class="bi bi-envelope-fill"></i> jeweldyna.oralcare@gmail.com</p>
                             <p><i class="bi bi-telephone-fill"></i> 082298115885</p>
-                            <p><i class="bi bi-geo-alt-fill" style="margin-bottom: 70px"></i> Jl. Berbek Industri V
+                            <p><i class="bi bi-geo-alt-fill" style="margin-bottom: 80px"></i> Jl. Berbek Industri V
                                 No.21, Bebek, Berbek, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256</p>
                         </div>
                     </div>

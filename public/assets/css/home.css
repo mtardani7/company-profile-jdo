@@ -8,7 +8,9 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
+body::-webkit-scrollbar {
+    display: none;
+}
 
 .hero-section {
     position: relative;
@@ -141,4 +143,41 @@ html {
     flex-shrink: 0; 
     box-shadow: 23px 23px 23px rgba(0, 0, 0, 0.3); 
     border-radius: 8px;
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 768px) {
+    .text-box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .manufacturing-capability img {
+        width: 100%;
+    }
+
+    .manufacturing-capability p {
+        margin: 0 2%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        margin-top: auto;
+    }
+
+    .text-box {
+        font-size: 14px;
+    }
+
+    .manufacturing-capability img {
+        width: 100%;
+    }
+
+    .manufacturing-capability p {
+        margin: 0 1%;
+    }
+    .hero-section{
+        margin: 1rem;
+    }
 }

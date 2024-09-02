@@ -23,15 +23,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Home.home');
 });
-
 Route::get('/about_us', [AboutUsController::class, 'about_us']);
 Route::get('/product', [ProductController::class, 'product']);
 Route::get('/address', [AdressController::class, 'address']);
 
 
 //Admin
+Route::get('/admin', [LoginAdminController::class, 'admin']);
+Route::post('/login', [LoginAdminController::class, 'login'])->name('login');
+Route::post('/logout', [LoginAdminController::class, 'logout']);
 Route::get('/login_admin', [LoginAdminController::class, 'index']);
-Route::get('/product_admin', [ProductAdminController::class, 'index']);
-Route::get('/tambah_product', [TambahProductController::class, 'index']);
-Route::get('/update_product', [UpdateProductController::class, 'index']);
+Route::middleware(['admin'])->group(function () {
+    Route::get('/home', [LoginAdminController::class, 'home']);
+    Route::get('/product_admin', [ProductAdminController::class, 'index']);
+    Route::get('/tambah_product', [TambahProductController::class, 'index']);
+     Route::get('/update_product', [UpdateProductController::class, 'index']);
+});
 

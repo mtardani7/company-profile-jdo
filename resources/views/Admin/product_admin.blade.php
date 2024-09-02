@@ -1,4 +1,4 @@
-@include('layouts.navbar')
+@include('layouts.navbar_admin')
 
 @section('title')
     Product
@@ -12,7 +12,7 @@
 
 
     <img src="{{ asset('assets/image/Product/product.png') }}" alt="background"
-        style="width: 100%; max-width: 1280px; height: auto;">
+        style="width: 100%; height: auto;">
 
 <div class="container-fluid text-center add_product">
     <div class="row align-items-start">

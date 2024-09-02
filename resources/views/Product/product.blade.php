@@ -10,7 +10,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
-<img src="{{ asset('assets/image/Product/product.png') }}" alt="background" style="width: 100%; max-width: 1280px; height: auto;">
+<img src="{{ asset('assets/image/Product/product.png') }}" alt="background" style="width: 100%; height: auto;">
 
 <div class="text">
     <h1>Product</h1>

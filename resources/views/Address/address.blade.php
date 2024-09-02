@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="{{ asset('assets/css/adress.css') }}">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-<img src="{{asset('assets/image/Address/addrres.png')}}" alt="background" style="width: 1500px">
+<img src="{{asset('assets/image/Address/addrres.png')}}" alt="background" style="width: 100%">
 
 <div class="card-about container-fluid mt-5">
     <div class="row">

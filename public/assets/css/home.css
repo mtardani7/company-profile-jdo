@@ -177,4 +177,7 @@ body::-webkit-scrollbar {
     .manufacturing-capability p {
         margin: 0 1%;
     }
+    .hero-section{
+        margin: 1rem;
+    }
 }

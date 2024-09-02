@@ -29,7 +29,11 @@ Route::get('/address', [AdressController::class, 'address']);
 
 //Admin
 Route::get('/admin', [LoginAdminController::class, 'admin']);
+Route::post('/login', [LoginAdminController::class, 'login'])->name('login');
+Route::post('/logout', [LoginAdminController::class, 'logout']);
 Route::get('/login_admin', [LoginAdminController::class, 'index']);
-Route::get('/product_admin', [ProductAdminController::class, 'index']);
-Route::get('/tambah_product', [TambahProductController::class, 'index']);
-
+Route::middleware(['admin'])->group(function () {
+    Route::get('/home', [LoginAdminController::class, 'home']);
+    Route::get('/product_admin', [ProductAdminController::class, 'index']);
+    Route::get('/tambah_product', [TambahProductController::class, 'index']);
+});

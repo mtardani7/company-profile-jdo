@@ -28,7 +28,7 @@
         <h3 style="color: white; font-weight: bold;">Product</h3>
       </div>
       <div class="col">
-        <button type="button" class="btn btn-light"><i class="bi bi-plus-circle" style="margin-right: 5px;"></i></i><a href="{{ url('/tambah_product')}}" style="text-decoration: none; color: black;">Create</a></button>
+        <button type="button" class="btn btn-secondary"><i class="bi bi-tools" style="margin-right: 5px;"></i><a href="{{ url('/tambah_product')}}" style="text-decoration: none; color: white;">Create</a></button>
       </div>
     </div>
   </div>
@@ -202,6 +202,75 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 
+
+<script>
+    const descriptionsKids = {
+        'image1': {
+            title: 'T41',
+            description: [
+                'Pegangan ibu jari untuk kontrol yang lebih baik',
+                'Pegangan 2 komponen - PP + TPE',
+                'Profil bulu berpotongan datar'
+            ]
+        },
+        'image2': {
+            title: 'T42',
+            description: [
+                'Deskripsi lain untuk gambar kedua',
+                'Fitur tambahan untuk gambar kedua',
+                'Informasi tambahan untuk gambar kedua'
+            ]
+        },
+        'image3': {
+            title: 'T43',
+            description: [
+                'Deskripsi lain untuk gambar ketiga',
+                'Fitur tambahan untuk gambar ketiga',
+                'Informasi tambahan untuk gambar ketiga'
+            ]
+        },
+        'image4': {
+            title: 'T44',
+            description: [
+                'Deskripsi lain untuk gambar empat',
+                'Fitur tambahan untuk gambar empat',
+                'Informasi tambahan untuk gambar empat'
+            ]
+        },
+        'image5': {
+            title: 'T45',
+            description: [
+                'Deskripsi lain untuk gambar lima',
+                'Fitur tambahan untuk gambar lima',
+                'Informasi tambahan untuk gambar lima'
+            ]
+        },
+        'image6': {
+            title: 'T46',
+            description: [
+                'Deskripsi lain untuk gambar enam',
+                'Fitur tambahan untuk gambar enam',
+                'Informasi tambahan untuk gambar enam'
+            ]
+        },
+        'image7': {
+            title: 'T47',
+            description: [
+                'Deskripsi lain untuk gambar tujuh',
+                'Fitur tambahan untuk gambar tujuh',
+                'Informasi tambahan untuk gambar tujuh'
+            ]
+        },
+        'image8': {
+            title: 'T48',
+            description: [
+                'Deskripsi lain untuk gambar delapan',
+                'Fitur tambahan untuk gambar delapan',
+                'Informasi tambahan untuk gambar delapan'
+            ]
+        }
+    };
+
     <script>
         const descriptionsKids = {
             'image1': {
@@ -269,6 +338,7 @@
                 ]
             }
         };
+
 
         document.getElementById('carouselExampleControls1').addEventListener('slid.bs.carousel', function() {
             const activeItem = document.querySelector('#carouselExampleControls1 .carousel-item.active');

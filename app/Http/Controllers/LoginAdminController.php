@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -33,13 +34,20 @@ class LoginAdminController extends Controller
             'email' => 'required|email',
             'password' => 'required'
         ]);
+        $user = \App\Models\User::where('email', $request->email,)->first();
+
+        if (!$user) {
+            return redirect()->back()->withInput($request->only('email'))->withErrors(['email' => 'Email Salah']);
+        }
+        if (!Hash::check($request->password, $user->password)) {
+            return redirect()->back()->withInput($request->only('password'))->withErrors(['password' => 'Password salah']);
+        }
 
         if (Auth::attempt($request->only('email', 'password'))) {
             return redirect()->to('/home/admin');
         }
-       
-        return redirect()->back()->withInput($request->only('login'))->withErrors(['password' => 'Password salah']);
     }
+    
     public function logout(Request $request)
     {
         Auth::logout();

@@ -1,4 +1,4 @@
-@include('layouts.navbar');
+@include('layouts.navbar_admin');
 
 @section('title')
     Create

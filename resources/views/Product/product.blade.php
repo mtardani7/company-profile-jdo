@@ -24,28 +24,10 @@
                 <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">Kids</h3>
                 <div class="carousel-inner">
                     <div class="carousel-item active" id="image1">
-                        <img src="/assets/image/about_us.png" class="d-block w-100 h-100" alt="...">
+                        <img src="/assets/image/Product/PP WHITE 1.jpg" class="d-block w-100 h-100" alt="...">
                     </div>
                     <div class="carousel-item" id="image2">
-                        <img src="/assets/image/addrres.png" class="d-block w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image3">
-                        <img src="/assets/image/dynapack_asia.png" class="d-block w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image4">
-                        <img src="/assets/image/home.png" class="d-block w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image5">
-                        <img src="/assets/image/jawel.png" class="d-block w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image6">
-                        <img src="/assets/image/kerja_sama.jpeg" class="d-block w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image7">
-                        <img src="/assets/image/logo.png" class="d-block w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image8">
-                        <img src="/assets/image/product.png" class="d-block w-100 h-100" alt="...">
+                        <img src="/assets/image/Product/PP WHITE 2.jpg" class="d-block w-100 h-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
@@ -79,29 +61,11 @@
                 <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">Manual</h3>
                 <div class="carousel-inner">
                     <div class="carousel-item active" id="image9">
-                        <img src="/assets/image/Product/PP WHITE 1.jpg" class="d-block w-80 h-90" alt="...">
+                        <img src="/assets/image/Product/TB CB WHITE 1.jpg" class="d-block w-80 h-90" alt="...">
                     </div>
                     <div class="carousel-item" id="image10">
-                        <img src="/assets/image/Product/PP WHITE 2.jpg" class="d-block w-80 h-90" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image11">
-                        <img src="/assets/image/dynapack_asia.png" class="d-block w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image12">
-                        <img src="/assets/image/home.png" class="d-block w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image13">
-                        <img src="/assets/image/jawel.png" class="d-block w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image14">
-                        <img src="/assets/image/kerja_sama.jpeg" class="d-block w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image15">
-                        <img src="/assets/image/logo.png" class="d-block w-100 h-100" alt="...">
-                    </div>
-                    <div class="carousel-item" id="image16">
-                        <img src="/assets/image/product.png" class="d-block w-100 h-100" alt="...">
-                    </div>
+                        <img src="/assets/image/Product/TB CB WHITE 2.jpg" class="d-block w-80 h-90" alt="...">
+                    </div>                    
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

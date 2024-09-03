@@ -23,11 +23,26 @@
             <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                 <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">Kids</h3>
                 <div class="carousel-inner">
+                    <!-- Calon e nggo nambah gambar -->
                     <div class="carousel-item active" id="image1">
-                        <img src="/assets/image/Product/PP WHITE 1.jpg" class="d-block w-100 h-100" alt="...">
+                        <img src="/assets/image/Product/PP WHITE 1.jpg" class="d-block w-100" alt="..." onclick="openModal(this)">
                     </div>
                     <div class="carousel-item" id="image2">
-                        <img src="/assets/image/Product/PP WHITE 2.jpg" class="d-block w-100 h-100" alt="...">
+                        <img src="/assets/image/Product/PP WHITE 2.jpg" class="d-block w-100" alt="..." onclick="openModal(this)">
+                    </div>
+
+                    <!-- Modal kanggo memperbesar gambar -->
+                    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                        <div class="modal-dialog custom-modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img id="modalImage" src="" class="img-fluid" alt="Image">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
@@ -40,7 +55,6 @@
                 </button>
             </div>
         </div>
-
         <div class="col" style="padding-left: 60px; padding-top: 60px">
             <p>Keunggulan Produk</p>
             <h3 id="product-title">T41</h3>
@@ -60,12 +74,27 @@
             <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                 <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">Manual</h3>
                 <div class="carousel-inner">
+                    <!-- Calon e nggo nambah gambar -->
                     <div class="carousel-item active" id="image9">
-                        <img src="/assets/image/Product/TB CB WHITE 1.jpg" class="d-block w-80 h-90" alt="...">
+                        <img src="/assets/image/Product/PP WHITE 1.jpg" class="d-block w-100" alt="..." onclick="openModal(this)">
                     </div>
                     <div class="carousel-item" id="image10">
-                        <img src="/assets/image/Product/TB CB WHITE 2.jpg" class="d-block w-80 h-90" alt="...">
-                    </div>                    
+                        <img src="/assets/image/Product/PP WHITE 2.jpg" class="d-block w-100" alt="..." onclick="openModal(this)">
+                    </div>
+
+                    <!-- Modal kanggo memperbesar gambar -->
+                    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                        <div class="modal-dialog custom-modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img id="modalImage" src="" class="img-fluid" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>                  
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -265,3 +294,20 @@
         });
     });
 </script>
+
+<script>
+    function openModal(imgElement) {
+    var modalImg = document.getElementById("modalImage");
+    modalImg.src = imgElement.src; 
+    var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+    modal.show();
+}
+
+document.getElementById('imageModal').addEventListener('hidden.bs.modal', function () {
+    var modalImg = document.getElementById("modalImage");
+    modalImg.style.transform = "scale(1)";
+});
+
+</script>
+
+

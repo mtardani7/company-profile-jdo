@@ -106,26 +106,26 @@
             <ul class="horizontal-list">
                 <li>
                     <div class="img-container">
-                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">Loe Leo</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        <img src="{{ asset('assets/image/AboutUs/amit.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Amit Goradia</h4>
+                        <p style="color: black; margin-bottom: 0;">President Commissioner</p>
+                        <p style="color: black; margin-top: -5px;">40 years experience</p>
                     </div>
                 </li>
                 <li>
                     <div class="img-container">
-                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">Rusher</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        <img src="{{ asset('assets/image/AboutUs/bennet.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Bennett Jap</h4>
+                        <p style="color: black; margin-bottom: 0;">Commissioner</p>
+                        <p style="color: black; margin-top: -5px;">17 years experience</p>
                     </div>
                 </li>
                 <li>
                     <div class="img-container">
-                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">Lorem Ipsum</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        <img src="{{ asset('assets/image/AboutUs/rudy.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Rudy Sugiarto</h4>
+                        <p style="color: black; margin-bottom: 0;">President Director</p>
+                        <p style="color: black; margin-top: -5px;">30 years experience</p>
                     </div>
                 </li>
             </ul>
@@ -134,26 +134,26 @@
             <ul class="horizontal-list" style="margin-top: 20px">
                 <li>
                     <div class="img-container">
-                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">Smith Storng</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        <img src="{{ asset('assets/image/AboutUs/melya.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Melya Mochtar</h4>
+                        <p style="color: black; margin-bottom: 0;">Director</p>
+                        <p style="color: black; margin-top: -5px;">25 years experience</p>
                     </div>
                 </li>
                 <li>
                     <div class="img-container">
-                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">King Rose</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        <img src="{{ asset('assets/image/AboutUs/sahrud.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Suhrud Goradia</h4>
+                        <p style="color: black; margin-bottom: 0;">Director</p>
+                        <p style="color: black; margin-top: -5px;">18 years experience</p>
                     </div>
                 </li>
                 <li>
                     <div class="img-container">
-                        <img src="{{ asset('assets/image/AboutUs/dynapack_asia.png') }}" alt="kerja_sama" class="img-circle">
-                        <h4 class="img-caption">Jhon Smith</h4>
-                        <p style="color: black; margin-bottom: 0;">Posisi</p>
-                        <p style="color: black; margin-top: -5px;">Pengalaman</p>
+                        <img src="{{ asset('assets/image/AboutUs/subir.png') }}" alt="kerja_sama" class="img-circle">
+                        <h4 class="img-caption">Subir Goradia</h4>
+                        <p style="color: black; margin-bottom: 0;">Director</p>
+                        <p style="color: black; margin-top: -5px;">14 years experience</p>
                     </div>
                 </li>
             </ul>

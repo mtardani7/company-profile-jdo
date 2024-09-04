@@ -37,6 +37,7 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/home/admin', [LoginAdminController::class, 'admin']);
     Route::get('/product_admin', [ProductAdminController::class, 'index']);
     Route::get('/tambah_product', [TambahProductController::class, 'index']);
+    Route::get('/update_product', [UpdateProductController::class, 'index']);
     Route::get('/about_us/admin', [LoginAdminController::class, 'about_us']);
     Route::get('/product/admin', [LoginAdminController::class, 'product']);
     Route::get('/address/admin', [LoginAdminController::class, 'address']);

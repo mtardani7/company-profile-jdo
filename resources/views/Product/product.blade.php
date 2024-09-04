@@ -17,7 +17,7 @@
 </div>
 
 <!--Kids -->
-<div class="container-fluid text-start">
+<div class="container-fluid text-start fade-in-up">
     <div class="row align-items-start">
         <div class="col">
             <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
@@ -68,7 +68,7 @@
 </div>
 
 <!-- Manual -->
-<div class="container-fluid text-start">
+<div class="container-fluid text-start fade-in-up">
     <div class="row align-items-start">
         <div class="col">
             <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
@@ -119,7 +119,7 @@
     </div>
 </div>
 
-<div class="text">
+<div class="text fade-in-up">
     <h1>Our Customer</h1>
     <div class="image-container">
         <img src="{{ asset('assets/image/Product/pepsoden.png') }}" class="d-block w-20 h-20" alt="Pepsoden">
@@ -309,5 +309,25 @@ document.getElementById('imageModal').addEventListener('hidden.bs.modal', functi
 });
 
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.fade-in-up');
+    
+    function checkPosition() {
+        elements.forEach(element => {
+            const position = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+  
+            if (position < windowHeight - 50) {
+                element.classList.add('show');
+            }
+        });
+    }
+  
+    window.addEventListener('scroll', checkPosition);
+    checkPosition();
+  });
+  </script>
 
 

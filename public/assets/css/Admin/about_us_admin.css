@@ -1,0 +1,115 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    color: #524A4E;
+}
+
+.teks {
+    padding-top: 50px;
+}
+
+.card-about {
+    color: white;
+    padding-top: 100px;
+    font-size: 24px;
+}
+
+.card-body {
+    background-color: #1B9C85;
+    border-radius: 10px;
+    height: 185px;
+}
+
+.jawel-da {
+    color: black;
+    margin-top: 50px;
+}
+
+.card-jawel {
+    background-color: #EEF1F1;
+    color: black;
+    height: 220px;
+}
+
+.card-body-profile {
+    display: flex;
+    justify-content: center;
+    background-color: #EEF1F1;
+    margin: 0 auto;
+    width: 1220px; 
+    padding: 20px; 
+    color: black;
+    border-radius: 10px;
+    height: 765px;
+    margin-top: 50px;
+}
+
+.profile-1 {
+    display: inline;
+}
+
+.profile-2{
+    margin-top: 250px;
+    display: inline;
+}
+
+.horizontal-list {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+}
+
+.horizontal-list li {
+    margin: 0 90px; 
+    text-decoration: none; 
+}
+
+.horizontal-list li:first-child {
+    margin-left: 0;
+}
+
+.horizontal-list li:last-child {
+    margin-right: 0; 
+}
+
+.img-circle {
+    width: 200px;
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: fill; 
+    display: block; 
+    border: 3px solid black;
+    object-position: center; 
+}
+
+.img-caption{
+    padding-top: 20px;
+}
+
+.profile-1, .profile-2 h4{
+    color: orange;
+}
+
+.container .card-body-profile{
+    margin-left: -55px;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(300px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}

@@ -6,12 +6,12 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('assets/css/adress.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/admin/adress_admin.css') }}">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 <img src="{{asset('assets/image/Address/addrres.png')}}" alt="background" style="width: 100%">
 
-<div class="card-about container-fluid mt-5">
+<div class="card-about container-fluid mt-5 fade-in-up">
     <div class="row">
         <div class="col-12">
             <div class="card p-4 d-flex justify-content-between align-items-start flex-md-row flex-column" style="background-color: #D9D9D9; width: 100%; height: 290px; padding: 30px; margin: 10 auto; max-width: 3000px;">
@@ -66,7 +66,7 @@
     </div>
 </div>
 
-<div id="map-container" style="height: 600px; width: 100%; margin-top: 60px;">
+<div id="map-container" style="height: 600px; width: 100%; margin-top: 60px;" class="fade-in-up">
     <iframe id="map-frame" 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.082801903194!2d112.75893277404224!3d-7.344598672248897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb2a90c1d593%3A0xeca0a15f3daee527!2sPT.%20Rapid%20Plast%20Indonesia%20Plant%202!5e0!3m2!1sid!2sid!4v1724058391552!5m2!1sid!2sid" 
             style=" width: 90%; height: 100%; margin-left: 60px" allowfullscreen="" loading="lazy">
@@ -78,5 +78,25 @@
         document.getElementById('map-frame').src = mapUrl;
     }
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.fade-in-up');
+    
+    function checkPosition() {
+        elements.forEach(element => {
+            const position = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+  
+            if (position < windowHeight - 50) {
+                element.classList.add('show');
+            }
+        });
+    }
+  
+    window.addEventListener('scroll', checkPosition);
+    checkPosition();
+  });
+  </script>
 
 @include('layouts.footer')

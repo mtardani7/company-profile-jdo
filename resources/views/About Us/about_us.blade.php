@@ -10,12 +10,12 @@
 
 <img src="{{ asset('assets/image/AboutUs/about_us.png') }}" alt="background" style="width: 100%; padding-top: 65px;">
 
-<div class="teks">
+<div class="teks fade-in-up">
     <h1>Our Story</h1>
     <img src="{{ asset('assets/image/AboutUs/kerja_sama.jpeg')}}" alt="kerja_sama" class="img-fluid mx-auto d-block" style="max-width: 100%; width: 845px;">
 </div>
 
-<div class="card-about container text-center">
+<div class="card-about container text-center fade-in-up">
     <div class="row align-items-center">
         <div class="col-12 col-md-6 mb-4">
             <div class="card text-start" style="border-radius: 10px; overflow: hidden;">
@@ -39,11 +39,11 @@
     </div>
 </div>
 
-<div class="teks">
+<div class="teks fade-in-up">
     <h1>Our Shareholders</h1>
 </div>
 
-<div class="jawel-da container text-center">
+<div class="jawel-da container text-center fade-in-up">
     <div class="row align-items-center">
       <div class="col">
         <img src="{{ asset('assets/image/AboutUs/jawel.png')}}" alt="kerja_sama" style="margin-right: 70px; width: 260px; height: 160">
@@ -70,7 +70,7 @@
     </div>
 </div>
 
-<div class="jawel-da container text-center">
+<div class="jawel-da container text-center fade-in-up">
     <div class="row align-items-center">
       <div class="col">
         <div class="card text-start">
@@ -97,10 +97,10 @@
     </div>
 </div>
 
-<div class="teks">
+<div class="teks fade-in-up">
     <h1>Management Team</h1>
 </div>
-<div class="card-body-profile">
+<div class="card-body-profile fade-in-up">
     <div class="card-body2">
         <div class="profile-1 container text-center" style="margin-top: 250px"> 
             <ul class="horizontal-list">
@@ -160,5 +160,25 @@
         </div>                       
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.fade-in-up');
+    
+    function checkPosition() {
+        elements.forEach(element => {
+            const position = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+  
+            if (position < windowHeight - 50) {
+                element.classList.add('show');
+            }
+        });
+    }
+  
+    window.addEventListener('scroll', checkPosition);
+    checkPosition();
+  });
+  </script>
 
 @include('layouts.footer')

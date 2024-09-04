@@ -180,3 +180,19 @@ body::-webkit-scrollbar {
         margin: 1rem;
     }
 }
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(350px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}

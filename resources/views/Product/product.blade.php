@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="{{ asset('assets/css/product.css') }}">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+<div id="preloader">
+    <img src="{{ '/assets/image/logo.png' }}" alt="Loading...">
+</div>
 
 <img src="{{ asset('assets/image/Product/product.png') }}" alt="background" style="width: 100%; height: auto;">
 
@@ -119,7 +122,7 @@
     </div>
 </div>
 
-<div class="text">
+<div class="text fade-in-up">
     <h1>Our Customer</h1>
     <div class="image-container">
         <img src="{{ asset('assets/image/Product/pepsoden.png') }}" class="d-block w-20 h-20" alt="Pepsoden">
@@ -312,22 +315,26 @@ document.getElementById('imageModal').addEventListener('hidden.bs.modal', functi
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-    const elements = document.querySelectorAll('.fade-in-up');
-    
-    function checkPosition() {
-        elements.forEach(element => {
-            const position = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-  
-            if (position < windowHeight - 50) {
-                element.classList.add('show');
-            }
-        });
-    }
-  
-    window.addEventListener('scroll', checkPosition);
-    checkPosition();
-  });
-  </script>
+        setTimeout(() => {
+            document.getElementById('preloader').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }, 300); 
 
+        const elements = document.querySelectorAll('.fade-in-up');
+
+        function checkPosition() {
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (position < windowHeight - 50) {
+                    element.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkPosition);
+        checkPosition();
+    });
+</script>
 

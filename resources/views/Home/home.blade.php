@@ -3,6 +3,10 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
 
+<div id="preloader">
+    <img src="{{ '/assets/image/logo.png' }}" alt="Loading...">
+</div>
+
     <img src="{{ asset('assets/image/home/home.png') }}" style="width: 100%; height: 500px;" alt="Home">
     <div class="hero-section">
         <div class="text-box">
@@ -141,5 +145,30 @@
         checkPosition();
       });
       </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(() => {
+            document.getElementById('preloader').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }, 300); 
+
+        const elements = document.querySelectorAll('.fade-in-up');
+
+        function checkPosition() {
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (position < windowHeight - 50) {
+                    element.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkPosition);
+        checkPosition();
+    });
+</script>
 
 @include('layouts.footer')

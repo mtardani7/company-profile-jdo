@@ -21,48 +21,18 @@ class ProductAdminController extends Controller
     {
         return view('Admin.update_produk');
     }
-    // public function createProduct(Request $request)
-    // {
-    //     // dd($request->all());
-    //     $validator = Validator::make($request->all(), [
-    //         'jenis' => 'required|string|max:255',
-    //         'merek' => 'required|string|max:255',
-    //         'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-    //         'keunggulan' =>'required|string|max:255',
-    //     ],[
-    //         'foto.max' => 'Gambar tidak boleh lebih dari 2 MB.',
-    //     ]);
-    //     if ($validator->fails()) {
-    //         return redirect()->back()->withErrors($validator)->withInput();
-    //     }
-    //     $photos = [];
-    //     foreach ($request->file('foto') as $photo) {
-    //         $filename = time() . '_' . uniqid() . '.' . $photo->getClientOriginalExtension();
-    //         $path = $photo->storeAs($filename);
-    //         $photos[] = $path;
-    //     }
 
-    //     $product = new Product([
-    //         'jenis' => $request->input('jenis'),
-    //         'merek' => $request->input('merek'),
-    //         'foto' => $photos,
-    //         'keunggulan' => $request->input('keunggulan'),
-    //     ]);
-    //     $product->save();
-
-    //     return redirect()->route('tambah')->with('success', 'Product created successfully.');
-    // }
     public function createProduct(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'jenis' => 'required|string|max:255',
             'merek' => 'required|string|max:255',
             'foto' => 'required|array', 
-            'foto.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
             'keunggulan' => 'required|array',
             'keunggulan.*' => 'required|string|max:255',
         ], [
-            'foto.max' => 'Gambar tidak boleh lebih dari 2 MB.',
+            'foto.max' => 'Gambar tidak boleh lebih dari 10 MB.',
         ]);
 
         if ($validator->fails()) {
@@ -71,22 +41,24 @@ class ProductAdminController extends Controller
 
         $photos = [];
         foreach ($request->file('foto') as $photo) {
-            $filename = time() . '_' . uniqid() . '.' . $photo->getClientOriginalExtension();
-            $photo->storeAs('public/fotos', $filename, 'public');
+            $filename = uniqid() . '.' . $photo->getClientOriginalExtension();
+            $photo->storeAs('foto', $filename, 'public');
             $photos[] = $filename;
         }
-
+        $keunggulan = $request->input('keunggulan');
         $product = new Product([
             'jenis' => $request->input('jenis'),
             'merek' => $request->input('merek'),
             'foto' => json_encode($photos),
-            'keunggulan' => $request->input('keunggulan'),
+            'keunggulan' => json_encode($keunggulan),
+            // 'keunggulan' => $request->input('keunggulan'),
+            
         ]);
         $product->save();
+        session()->flash('success', 'Product created successfully.');
 
         return redirect()->route('tambah')->with('success', 'Product created successfully.');
     }
-
 
     public function updateProduct(Request $request, $id)
     {

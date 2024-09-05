@@ -26,6 +26,20 @@
         </div>
     @endif
 
+    @if (session('success'))
+        <div class="position-fixed" style="bottom: 16px; right: 16px; width: 400px; z-index:10">
+            <ul class="list-unstyled">
+                <li>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ session('success') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    @endif
+
+
     <div class="form" style="margin-left: 325px; margin-top: 30px;">
         <form action="{{ route('tambah_product') }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -44,7 +58,7 @@
                     <label for="inputGambar1" style="color: black" class="form-label"><b>Gambar</b></label>
                     <div class="input-group">
                         <input type="file" class="form-control" id="inputGambar1" accept="image/*"
-                            style="border: black solid 1px;" name="foto[]" multiple>
+                            style="border: black solid 1px;" name="foto[]" required>
                         <button type="button" style="margin-left: 10px; border-radius: 0;"
                             class="btn btn-outline-secondary" onclick="addImageInput()">
                             <i class="bi bi-plus"></i>
@@ -57,7 +71,8 @@
                     <label for="inputDeskripsi1" style="color: black" class="form-label"><b>Keunggulan Produk</b></label>
                     <div class="input-group">
                         <input type="text" class="form-control" id="inputDeskripsi1"
-                            placeholder="masukkan keunggulan produk" style="border: black solid 1px;" name="keunggulan[]" multiple>
+                            placeholder="masukkan keunggulan produk" style="border: black solid 1px;" name="keunggulan[]"
+                             required>
                         <button type="button" style="margin-left: 10px; border-radius: 0;"
                             class="btn btn-outline-secondary" onclick="addDescriptionInput()">
                             <i class="bi bi-plus"></i>
@@ -87,7 +102,7 @@
             newInputDiv.innerHTML = `
             <label for="inputGambar${imageInputCount}" style="color: black" class="form-label"><b>Gambar</b></label>
             <div class="input-group">
-                <input type="file" class="form-control" id="inputGambar${imageInputCount}" accept="image/*" style="border: black solid 1px;">
+                <input type="file" class="form-control" id="inputGambar${imageInputCount}" accept="image/*" style="border: black solid 1px;" name="foto[]">
                 <button type="button" style="margin-left: 10px; border-radius: 0;" class="btn btn-outline-secondary" onclick="removeImageInput(this)">
                     <i class="bi bi-dash"></i>
                 </button>
@@ -113,7 +128,7 @@
             newInputDiv.innerHTML = `
             <label for="inputDeskripsi${descriptionInputCount}" style="color: black" class="form-label"><b>Keunggulan Produk</b></label>
             <div class="input-group">
-                <input type="text" class="form-control" id="inputDeskripsi${descriptionInputCount}" placeholder="masukkan keunggulan produk" style="border: black solid 1px;">
+                <input type="text" class="form-control" id="inputDeskripsi${descriptionInputCount}" placeholder="masukkan keunggulan produk" style="border: black solid 1px;" name="keunggulan[]">
                 
                 <button type="button" style="margin-left: 10px; border-radius: 0;" class="btn btn-outline-secondary" onclick="removeDescriptionInput(this)">
                     <i class="bi bi-dash"></i>

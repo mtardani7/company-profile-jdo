@@ -15,13 +15,13 @@
 <img src="{{ asset('assets/image/AboutUs/about_us.png') }}" alt="background" style="width: 100%; padding-top: 65px;">
 
 <div class="teks fade-in-up">
-    <h1>Our Story</h1>
+    <h1 class=" fade-in-up">Our Story</h1>
     <img src="{{ asset('assets/image/AboutUs/kerja_sama.jpeg')}}" alt="kerja_sama" class="img-fluid mx-auto d-block" style="max-width: 100%; width: 845px;">
 </div>
 
-<div class="card-about container text-center fade-in-up">
+<div class="card-about container text-center">
     <div class="row align-items-center">
-        <div class="col-12 col-md-6 mb-4">
+        <div class="col-12 col-md-6 mb-4 fade-in-up">
             <div class="card text-start" style="border-radius: 10px; overflow: hidden;">
                 <div class="card-body">
                     <p class="card-text" style="word-wrap: break-word; overflow-wrap: break-word; hyphens: auto; font-size: 22px;">
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 mb-4">
+        <div class="col-12 col-md-6 mb-4 fade-in-up">
             <div class="card text-start" style="border-radius: 10px; overflow: hidden;">
                 <div class="card-body">
                     <h4 class="card-title">Mission:</h4>
@@ -190,7 +190,7 @@
         setTimeout(() => {
             document.getElementById('preloader').style.display = 'none';
             document.getElementById('content').style.display = 'block';
-        }, 300); 
+        }, 500); 
 
         const elements = document.querySelectorAll('.fade-in-up');
 

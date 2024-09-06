@@ -108,7 +108,7 @@
         setTimeout(() => {
             document.getElementById('preloader').style.display = 'none';
             document.getElementById('content').style.display = 'block';
-        }, 300); 
+        }, 500); 
 
         const elements = document.querySelectorAll('.fade-in-up');
 

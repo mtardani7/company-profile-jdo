@@ -20,7 +20,7 @@
     <div class="quality-promise fade-in-up">
         <div class="container">
             <div class="row">
-                <div class="column">
+                <div class="column fade-in-up">
                     <div>
                         <h2 style="padding-top: 50px; font-size: 35px; color: #524A4E">QUALITY PROMISE</h2>
                         <h4>With us, Quality is guaranteed, not just controlled.</h4>
@@ -72,26 +72,26 @@
         </div>
     </div>
 
-    <div class="manufacturing-capability fade-in-up" style="margin-top: 20px">
+    <div class="manufacturing-capability" style="margin-top: 20px">
         <div class="container">
-            <h2 style="font-size: 35px; color: #524A4E">MANUFACTURING CAPABILITY</h2>
+            <h2 class="fade-in-up" style="font-size: 35px; color: #524A4E">MANUFACTURING CAPABILITY</h2>
             <div class="row">
-                <div class="column" style="margin-top: 50px;">
+                <div class="column fade-in-up" style="margin-top: 50px;">
                     <h4>WHO WE ARE</h4>
                     <p>Layanan konsumen Jewel adalah produsen terkemuka produk perawatan mulut
                         dan solusi kebersihan rumah tangga, dengan jangkauan di 50 negara dan jangkauan lebih dari 50
                         merek
                         label.</p>
                 </div>
-                <div class="column">
+                <div class="column fade-in-up">
                     <img src="{{ asset('assets/image/home/india.png') }}" alt="India">
                 </div>
             </div>
             <div class="row">
-                <div class="column">
+                <div class="column fade-in-up">
                     <img src="{{ asset('assets/image/home/ilmuan.png') }}" alt="Ilmuan">
                 </div>
-                <div class="column" style="margin-top: 50px;">
+                <div class="column fade-in-up" style="margin-top: 50px;">
                     <h4>WHAT WE MAKE</h4>
                     <p>Memanfaatkan yang terbaik dari alam untuk memberikan hasil terbaik adalah misi pribadi kami. Kami
                         menggabungkan bahan kandungan yang bermanfaat dengan ilmu pengetahuan dan teknologi yang
@@ -103,19 +103,19 @@
         </div>
     </div>
 
-    <div class="company-profile fade-in-up">
+    <div class="company-profile">
         <div class="container">
-            <h2 style="font-size: 35px; color:#524A4E; margin-top: 7%;">COMPANY PROFILE JDO</h2>
-            <iframe src="https://drive.google.com/file/d/1F8Qonw4pU3NcsqQDFNsaQ4-siYjLFody/preview" width="900"
+            <h2 class=" fade-in-up" style="font-size: 35px; color:#524A4E; margin-top: 7%;">COMPANY PROFILE JDO</h2>
+            <iframe class=" fade-in-up" src="https://drive.google.com/file/d/1F8Qonw4pU3NcsqQDFNsaQ4-siYjLFody/preview" width="900"
                 height="500" allow="autoplay; fullscreen" style="margin-top: 30px;" allowfullscreen>
             </iframe>
         </div>
     </div>
 
-    <div class="operational-excellence fade-in-up">
+    <div class="operational-excellence">
         <div class="container">
-            <h2 style="font-size: 35px; color:#524A4E;">OPERATIONAL EXCELLENCE</h2>
-            <div class="icons d-flex justify-content-between flex-wrap">
+            <h2 class=" fade-in-up" style="font-size: 35px; color:#524A4E;">OPERATIONAL EXCELLENCE</h2>
+            <div class="icons d-flex justify-content-between flex-wrap  fade-in-up">
                 <img src="{{ asset('assets/image/home/otak.png') }}" alt="Otak">
                 <img src="{{ asset('assets/image/home/jempol.png') }}" alt="Jempol">
                 <img src="{{ asset('assets/image/home/daur.png') }}" alt="Daur">
@@ -151,7 +151,7 @@
         setTimeout(() => {
             document.getElementById('preloader').style.display = 'none';
             document.getElementById('content').style.display = 'block';
-        }, 300); 
+        }, 500); 
 
         const elements = document.querySelectorAll('.fade-in-up');
 

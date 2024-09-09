@@ -10,6 +10,9 @@
     width: 100%;
     object-fit: cover;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
 
 .hero-section {
     margin: -10% 0  0 10%;
@@ -46,8 +49,21 @@
 }
 
 .certifications img {
-    width: 200px;
-    padding: 30px 25px 0;
+    width: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 30px;
+}
+
+.manufacturing-capability .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.manufacturing-capability .column {
+    flex: 1;
+    padding: 10px;
 }
 
 .manufacturing-capability img {
@@ -56,17 +72,42 @@
     margin-top: 20px;
     box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.7);
     border-radius: 8px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
 }
 
 .manufacturing-capability h4 {
     font-size: 25px;
+    color: #ff9e0d;
     color: #ff9e0d;
     border-bottom: 3px solid #4e44a8;
     padding-bottom: 5px;
     display: inline-block;
 }
 
+.manufacturing-capability p {
+    text-align: left;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-family: "Times New Roman";
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+}
+
+.company-profile {
+    text-align: center;
+}
+
+.company-profile img {
+    width: 100%;
+}
+
 .operational-excellence .icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 15px;
     padding-top: 50px;
 }
 
@@ -89,58 +130,81 @@
 }
 
 .operational-excellence .icons img {
-    width: 100px;
+    max-width: 100px;
+    flex-shrink: 0;
     box-shadow: 23px 23px 23px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
 }
 
-/* respoonsif untuk tablet */
-@media only screen and(max-width:700px) {
-    /* disesuaikan sesuai kebutuhanmu */
+/* Responsive Design with Media Queries */
+@media (max-width: 768px) {
+    .text-box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .manufacturing-capability img {
+        width: 100%;
+    }
+
+    .manufacturing-capability p {
+        margin: 0 2%;
+    }
 }
 
-/* responsif untuk mobile */
-@media only screen and (max-width: 420px) {
-    /* hero section */
-    .hero img {
-        height: 25rem;
+@media (max-width: 480px) {
+    .hero-section {
+        margin-top: auto;
+    }
+
+    .text-box {
+        font-size: 14px;
+    }
+
+    .manufacturing-capability img {
+        width: 100%;
+    }
+
+    .manufacturing-capability p {
+        margin: 0 1%;
     }
     .hero-section {
-        margin: -10% 0 0 0;
+        margin: 1rem;
     }
+}
 
-    /* section quality promise */
-    .quality-promise,
-    .manufacturing-capability,
-    .company-profile,
-    .operational-excellence {
-        margin: 0 10px;
-    }
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(350px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
-    /* section manufacturing capability */
-    .manufacturing-capability > .boxs {
-        flex-wrap: nowrap;
-        flex-direction: column;
-    }
-    .manufacturing-capability h4 {
-        margin-top: 0.5rem;
-    }
+.fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    .manufacturing-capability > .boxs > p {
-        margin: 0 12px;
-    }
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
 
-    .certifications img {
-        width: 100px;
-    }
+/* preloader.css */
 
-    /* section company profile */
-    .company-profile > .container > video {
-        width: 360px;
-        height: 200px;
-    }
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
 
-    .operational-excellence .icons img {
-        max-width: 50px;
-    }
+#preloader img {
+    width: 100px; /* Sesuaikan dengan ukuran logo */
+    height: auto;
 }

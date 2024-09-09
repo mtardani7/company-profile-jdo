@@ -53,21 +53,24 @@
 
     <!--Kids -->
     @foreach ($product as $pd)
-        <div class="container-fluid text-start fade-in-up">
+        <div class="container-fluid text-start">
             <div class="row align-items-start">
                 <div class="col">
                     <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel"
                         data-bs-interval="3000">
                         <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">{{ $pd->jenis }}</h3>
-                        <div class="position-absolute" style="top: 0; right: -590px; padding-right: 20px;">
+                        <div class="position-absolute" style="top: 0; right: -590px; display: flex; gap: 10px; padding-right: 20px;">
                             <form action="{{ route('delete', $pd->id) }}" method="get">
-                                <button type="submit" class="btn btn-danger btn-sm" style="height: 36px;"><i
-                                        class="bi bi-trash3-fill" style="margin-right: 5px;"></i>Delete</button>
+                                <button type="submit" class="btn btn-danger btn-sm" style="height: 36px;">
+                                    <i class="bi bi-trash3-fill" style="margin-right: 5px;"></i>Delete
+                                </button>
                             </form>
-                            <button type="button" class="btn btn-primary"><i class="bi bi-gear-fill"
-                                    style="margin-right: 5px;"></i><a href="{{ url('/update_product') }}"
-                                    style="text-decoration: none; color: white;">Update</a></button>
-                        </div>
+                            <a href="{{ url('/update_product') }}" style="text-decoration: none;">
+                                <button type="button" class="btn btn-primary" style="height: 36px;">
+                                    <i class="bi bi-gear-fill" style="margin-right: 5px;"></i>Update
+                                </button>
+                            </a>
+                        </div>                        
                         <div class="carousel-inner">
                             @if (is_array($pd->foto) || is_object($pd->foto))
                                 @foreach ($pd->foto as $index => $foto)

@@ -12,12 +12,21 @@
 
 @section('content')
 
-<div style="padding-top: 60px; padding-left: 30px ; font-size: 60px">
-    <a href="/product/admin"><i class="icon fa-solid fa-angle-left"></i></a>
-</div>
-    <div class="teks">
-        <h2>Create Product</h2>
+<div class="container text-start">
+    <div class="row align-items-start">
+      <div class="col">
+        <div style="padding-top: 60px; padding-left: 30px ; font-size: 30px">
+            <a href="/product/admin"><i class="icon fa-solid fa-angle-left"></i></a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="teks">
+            <h2>Create Product</h2>
+        </div>
+      </div>
     </div>
+</div>
+
     @if ($errors->any())
         <div class="position-fixed" style="bottom: 16px; right: 16px; width: 400px; z-index:10">
             <ul class="list-unstyled">
@@ -44,8 +53,7 @@
         </div>
     @endif
 
-
-    <div class="form" style="margin-left: 325px; margin-top: 30px;">
+    <div class="form" style="margin-left: 325px; margin-top: 20px;">
         <form action="{{ route('tambah_product') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
@@ -88,7 +96,7 @@
             <button type="submit" class="btn_tambah">Simpan</button>
             <div class="text">
                 <p style="padding-left: 220px; font-weight: bold; font-size: 30px; padding-top: 60px;">Our Customer</p>
-                <img src="{{ asset('assets/image/Product/pepsoden.png') }}" class="d-block w-20 h-20" alt="Pepsoden">
+                <img src="{{ asset('assets/image/Product/pepsoden.png') }}" class="d-block w-20 h-20" style="margin-left: 200px;" alt="Pepsoden">
             </div>
         </form>
     </div>

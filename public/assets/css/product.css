@@ -117,7 +117,7 @@ body::-webkit-scrollbar {
     transform: translateX(0);
 }
 
-/* preloader.css */
+
 
 #preloader {
     position: fixed;
@@ -133,7 +133,7 @@ body::-webkit-scrollbar {
 }
 
 #preloader img {
-    width: 100px; /* Sesuaikan dengan ukuran logo */
+    width: 100px; 
     height: auto;
 }
 

@@ -2,63 +2,108 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ProductAdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(Request $request)
     {
-        return view('Admin.product_admin');
+        $cari = $request->input('cari');
+
+        $product = Product::when($cari, function ($query, $cari) {
+            return $query->where('jenis', 'like', "%$cari%")
+            ->orWhere('merek', 'like', "%$cari%");
+        })->get();
+
+        return view('Admin.product_admin', compact('product', 'cari'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('Admin.tambah_product');
+    }
+    public function update()
+    {
+        return view('Admin.update_produk');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function createProduct(Request $request)
     {
-        //
+        
+        $validator = Validator::make($request->all(), [
+            'jenis' => 'required|string|max:255',
+            'merek' => 'required|string|max:255',
+            'foto' => 'required|array', 
+            'foto.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
+            'keunggulan' => 'required|array',
+            'keunggulan.*' => 'required|string|max:255',
+        ], [
+            'foto.max' => 'Gambar tidak boleh lebih dari 10 MB.',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        $photos = [];
+        foreach ($request->file('foto') as $photo) {
+            $filename = uniqid() . '.' . $photo->getClientOriginalExtension();
+            $photo->storeAs('foto', $filename, 'public');
+            $photos[] = $filename;
+        }
+        $keunggulan = $request->input('keunggulan');
+        $product = new Product([
+            'jenis' => $request->input('jenis'),
+            'merek' => $request->input('merek'),
+            'foto' => $photos,
+            'keunggulan' => $keunggulan,            
+        ]);
+        $product->save();
+        session()->flash('success', 'Product created successfully.');
+
+        return redirect()->route('tambah')->with('success', 'Product created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function updateProduct(Request $request, $id)
     {
-        //
+        $request->validate([
+            'jenis' => 'required|string|max:255',
+            'merek' => 'required|string|max:255',
+            'foto' => 'sometimes|array',
+            'foto.*' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'keunggulan' => 'required|array',
+        ]);
+
+        $product = Product::findOrFail($id);
+
+        if ($request->hasFile('foto')) {
+            $photos = [];
+            foreach ($request->file('foto') as $photo) {
+                $path = $photo->store('public/photos');
+                $photos[] = $path;
+            }
+            $product->foto = json_encode($photos);
+        }
+
+        $product->jenis = $request->jenis;
+        $product->merek = $request->merek;
+        $product->keunggulan = json_encode($request->keunggulan);
+        $product->save();
+
+        return redirect()->route('update')->with('success', 'Product updated successfully.');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+    public function delete(Request $request, $id){
+        try {
+            $product = Product::findOrFail($id); 
+            $product->delete();
+            // Add a success message to the session
+            return redirect()->back()->with('success', 'Data berhasil dihapus.');
+        } catch (\Exception $e) {
+            // Add an error message to the session
+            return redirect()->back()->with('error', 'Gagal menghapus data.');
+        }
     }
 }

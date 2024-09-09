@@ -12,8 +12,8 @@ return new class extends Migration
             $table->id();
             $table->string('jenis');
             $table->string('merek');
-            $table->json('foto');
-            $table->json('keunggulan');
+            $table->string('foto');
+            $table->string('keunggulan');
             $table->timestamps();
         });
     }

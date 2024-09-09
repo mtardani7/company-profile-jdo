@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Hash;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class LoginAdminController extends Controller
 {
@@ -22,7 +23,8 @@ class LoginAdminController extends Controller
     }
     public function product()
     {
-        return view('Admin.product_admin');
+        $product = Product::all();
+        return view('Admin.product_admin', compact('product'));
     }
     public function address()
     {

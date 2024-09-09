@@ -3,11 +3,12 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
 
-    <img src="{{ asset('assets/image/home/home.png') }}" style="width: 100%; " alt="Home">
+    <img class="hero-img" src="{{ asset('assets/image/home/home.png') }}" alt="Home">
     <div class="hero-section">
         <div class="text-box">
-            <h2>How We Work</h2>
-            <p>At our core, we prioritize excellence and adherence to the highest standards. Our Domestic Medical Devices
+            <h2 class="px-2">How We Work</h2>
+            <p class="px-2">At our core, we prioritize excellence and adherence to the highest standards. Our Domestic
+                Medical Devices
                 production is aligned with the best practices, ensuring top-tier quality and compliance. We strictly follow
                 the...</p>
         </div>
@@ -123,4 +124,4 @@
     <p>cobaa</p>
 
 
-@include('layouts.footer')
+    @include('layouts.footer')

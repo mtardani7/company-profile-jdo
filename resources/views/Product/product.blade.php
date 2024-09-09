@@ -13,14 +13,13 @@
     <div id="preloader">
         <img src="{{ '/assets/image/logo.png' }}" alt="Loading...">
     </div>
-
+    
     <img src="{{ asset('assets/image/Product/product.png') }}" alt="background" style="width: 100%; height: auto;">
 
     <div class="text">
         <h1>Product</h1>
     </div>
 
-    <!--Kids -->
     @foreach ($product as $pd)
         <div class="container-fluid text-start">
             <div class="row align-items-start">
@@ -29,17 +28,17 @@
                         data-bs-interval="3000">
                         <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">{{ $pd->jenis }}</h3>
                         <div class="carousel-inner">
-                            <!-- Calon e nggo nambah gambar -->
-                            <div class="carousel-item active" id="image1">
-                                <img src="/assets/image/Product/PP WHITE 1.jpg" class="d-block w-100" alt="..."
-                                    onclick="openModal(this)">
-                            </div>
-                            <div class="carousel-item" id="image2">
-                                <img src="/assets/image/Product/PP WHITE 2.jpg" class="d-block w-100" alt="..."
-                                    onclick="openModal(this)">
-                            </div>
+                            @if (is_array($pd->foto) || is_object($pd->foto))
+                                @foreach ($pd->foto as $index => $foto)
+                                    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}"
+                                        id="image{{ $index }}">
+                                        <img src="{{ asset('storage/foto/' . $foto) }}" class="d-block w-100" alt="..."
+                                            onclick="openModal(this)">
+                                    </div>
+                                @endforeach
+                            @endif
 
-                            <!-- Modal kanggo memperbesar gambar -->
+                            <!-- Modal untuk memperbesar gambar -->
                             <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel"
                                 aria-hidden="true">
                                 <div class="modal-dialog custom-modal">
@@ -71,66 +70,16 @@
                     <p>Keunggulan Produk</p>
                     <h3 id="product-title">{{ $pd->merek }}</h3>
                     <ul id="product-description">
-                        <li>Pegangan ibu jari untuk kontrol yang lebih baik</li>
-                        <li>Pegangan 2 komponen - PP + TPE</li>
-                        <li>Profil bulu berpotongan datar</li>
+                        @if (is_array($pd->keunggulan) || is_object($pd->keunggulan))
+                            @foreach ($pd->keunggulan as $keunggulan)
+                                <li>{{ $keunggulan }}</li>
+                            @endforeach
+                        @endif
                     </ul>
                 </div>
             </div>
         </div>
     @endforeach
-
-    <!-- Manual -->
-    {{-- <div class="container-fluid text-start">
-    <div class="row align-items-start">
-        <div class="col">
-            <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">Manual</h3>
-                <div class="carousel-inner">
-                    <!-- Calon e nggo nambah gambar -->
-                    <div class="carousel-item active" id="image9">
-                        <img src="/assets/image/Product/PP WHITE 1.jpg" class="d-block w-100" alt="..." onclick="openModal(this)">
-                    </div>
-                    <div class="carousel-item" id="image10">
-                        <img src="/assets/image/Product/PP WHITE 2.jpg" class="d-block w-100" alt="..." onclick="openModal(this)">
-                    </div>
-
-                    <!-- Modal kanggo memperbesar gambar -->
-                    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-                        <div class="modal-dialog custom-modal">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body text-center">
-                                    <img id="modalImage" src="" class="img-fluid" alt="Image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>                  
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-
-        <div class="col" style="padding-left: 60px; padding-top: 60px">
-            <p>Keunggulan Produk</p>
-            <h3 id="product-title2">T49</h3>    
-            <ul id="product-description2">
-                <li>Deskripsi lain untuk gambar sembilan</li>
-                <li>Fitur tambahan untuk gambar sembilan</li>
-                <li>Informasi tambahan untuk gambar sembilan</li>
-            </ul>
-        </div>
-    </div>
-</div> --}}
 
     <div class="text fade-in-up">
         <h1>Our Customer</h1>
@@ -328,12 +277,12 @@
         });
     </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(() => {
-            document.getElementById('preloader').style.display = 'none';
-            document.getElementById('content').style.display = 'block';
-        }, 500); 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                document.getElementById('preloader').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }, 500);
 
             const elements = document.querySelectorAll('.fade-in-up');
 

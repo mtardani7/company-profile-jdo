@@ -8,9 +8,16 @@ use Illuminate\Support\Facades\Validator;
 
 class ProductAdminController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('Admin.product_admin');
+        $cari = $request->input('cari');
+
+        $product = Product::when($cari, function ($query, $cari) {
+            return $query->where('jenis', 'like', "%$cari%")
+            ->orWhere('merek', 'like', "%$cari%");
+        })->get();
+
+        return view('Admin.product_admin', compact('product', 'cari'));
     }
 
     public function create()
@@ -24,6 +31,7 @@ class ProductAdminController extends Controller
 
     public function createProduct(Request $request)
     {
+        
         $validator = Validator::make($request->all(), [
             'jenis' => 'required|string|max:255',
             'merek' => 'required|string|max:255',
@@ -49,10 +57,8 @@ class ProductAdminController extends Controller
         $product = new Product([
             'jenis' => $request->input('jenis'),
             'merek' => $request->input('merek'),
-            'foto' => json_encode($photos),
-            'keunggulan' => json_encode($keunggulan),
-            // 'keunggulan' => $request->input('keunggulan'),
-            
+            'foto' => $photos,
+            'keunggulan' => $keunggulan,            
         ]);
         $product->save();
         session()->flash('success', 'Product created successfully.');
@@ -89,5 +95,15 @@ class ProductAdminController extends Controller
         return redirect()->route('update')->with('success', 'Product updated successfully.');
     }
 
-
+    public function delete(Request $request, $id){
+        try {
+            $product = Product::findOrFail($id); 
+            $product->delete();
+            // Add a success message to the session
+            return redirect()->back()->with('success', 'Data berhasil dihapus.');
+        } catch (\Exception $e) {
+            // Add an error message to the session
+            return redirect()->back()->with('error', 'Gagal menghapus data.');
+        }
+    }
 }

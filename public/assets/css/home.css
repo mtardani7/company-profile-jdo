@@ -1,4 +1,4 @@
-* {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -6,30 +6,38 @@
     scroll-behavior: smooth;
 }
 
-.hero img {
-    width: 100%;
-    object-fit: cover;
+html {
+    scroll-behavior: smooth;
 }
+
 body::-webkit-scrollbar {
     display: none;
 }
 
 .hero-section {
-    margin: -10% 0  0 10%;
+    position: relative;
+    width: 100%;
+    max-width: 858px;
+    margin-left: 10%;
+    margin-top: -10%;
 }
 
 .hero-section img {
     width: 100%;
+    height: auto; /* Ensure images scale proportionally */
     display: block;
 }
 
 .text-box {
+    position: absolute;
     bottom: 20px;
     left: 20px;
     background-color: #008b72;
     color: #fff;
     padding: 20px;
-    width: 424px;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -41,58 +49,59 @@ body::-webkit-scrollbar {
 .quality-promise,
 .manufacturing-capability,
 .operational-excellence {
+    margin-top: 10%;
+    text-align: center;
     padding: 40px 0;
 }
 
-.certifications {
-    gap: 20px;
-}
-
-.certifications img {
-    width: 100px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 30px;
-}
-
-.manufacturing-capability .row {
+.quality-promise .row, .manufacturing-capability .row {
     display: flex;
+    flex-wrap: wrap; /* Ensure rows wrap on smaller screens */
     justify-content: space-between;
     gap: 20px;
 }
 
-.manufacturing-capability .column {
+.column {
     flex: 1;
     padding: 10px;
 }
 
-.manufacturing-capability img {
-    width: 310px;
-    height: 100%;
+.quality-promise .column p,
+.manufacturing-capability p {
+    text-align: left;
+    padding-left: 100px;
+    font-family: "Times New Roman";
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+}
+
+.certifications {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
-    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.7);
-    border-radius: 8px;
-    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.7);
+}
+
+.certifications img {
+    width: 100px;
+    padding: 30px 25px;
+}
+
+.manufacturing-capability img {
+    width: 70%;
+    height: auto; /* Keep aspect ratio */
+    margin-top: 20px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.7); 
     border-radius: 8px;
 }
 
 .manufacturing-capability h4 {
     font-size: 25px;
-    color: #ff9e0d;
-    color: #ff9e0d;
+    color: #FF9E0D;
     border-bottom: 3px solid #4e44a8;
     padding-bottom: 5px;
     display: inline-block;
-}
-
-.manufacturing-capability p {
-    text-align: left;
-    margin-right: 100px;
-    margin-left: 100px;
-    font-family: "Times New Roman";
-    font-size: 18px;
-    line-height: 1.6;
-    color: black;
 }
 
 .company-profile {
@@ -101,64 +110,71 @@ body::-webkit-scrollbar {
 
 .company-profile img {
     width: 100%;
+    height: auto;
 }
 
 .operational-excellence .icons {
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 15px;
     padding-top: 50px;
 }
 
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16*100) */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background-color: #000;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
 .operational-excellence .icons img {
     max-width: 100px;
-    flex-shrink: 0;
-    box-shadow: 23px 23px 23px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0; 
+    box-shadow: 23px 23px 23px rgba(0, 0, 0, 0.3); 
     border-radius: 8px;
 }
 
 /* Responsive Design with Media Queries */
+@media (max-width: 1024px) {
+    .hero-section {
+        margin-left: 5%;
+    }
+
+    .text-box {
+        width: 90%;
+        left: 5%;
+    }
+}
+
 @media (max-width: 768px) {
     .text-box {
         width: 100%;
         padding: 15px;
     }
 
-    .manufacturing-capability img {
+    .hero-section {
+        margin: 0;
+        padding: 0 1rem;
+    }
+
+    .manufacturing-capability img,
+    .certifications img {
         width: 100%;
     }
 
-    .manufacturing-capability p {
-        margin: 0 2%;
+    .quality-promise .column p, .manufacturing-capability p {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .hero-section {
-        margin-top: auto;
+        margin-top: 1rem;
     }
 
     .text-box {
         font-size: 14px;
+        padding: 10px;
+    }
+
+    .certifications img,
+    .operational-excellence .icons img {
+        width: 70px;
     }
 
     .manufacturing-capability img {
@@ -168,43 +184,8 @@ body::-webkit-scrollbar {
     .manufacturing-capability p {
         margin: 0 1%;
     }
+
     .hero-section {
         margin: 1rem;
     }
-}
-
-.fade-in-up {
-    opacity: 0;
-    transform: translateY(350px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in-up.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.show {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* preloader.css */
-
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
-#preloader img {
-    width: 100px; /* Sesuaikan dengan ukuran logo */
-    height: auto;
 }

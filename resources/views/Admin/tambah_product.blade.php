@@ -7,9 +7,14 @@
 <link rel="stylesheet" href="{{ asset('assets/css/admin/tambah_product.css') }}">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 @section('content')
 
+<div style="padding-top: 60px; padding-left: 30px ; font-size: 60px">
+    <a href="/product/admin"><i class="icon fa-solid fa-angle-left"></i></a>
+</div>
     <div class="teks">
         <h2>Create Product</h2>
     </div>

@@ -1,9 +1,9 @@
 @include('layouts.navbar_admin')
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/admin/home_admin.css') }}">
 
-    <img src="{{ asset('assets/image/home/home.png') }}" style="width: 100%; " alt="Home">
+    <img src="{{ asset('assets/image/home/home.png') }}" style="width: 100%; height: 500px;" alt="Home">
     <div class="hero-section">
         <div class="text-box">
             <h2>How We Work</h2>
@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    <div class="quality-promise">
+    <div class="quality-promise fade-in-up">
         <div class="container">
             <div class="row">
                 <div class="column">
@@ -68,7 +68,7 @@
         </div>
     </div>
 
-    <div class="manufacturing-capability" style="margin-top: 20px">
+    <div class="manufacturing-capability fade-in-up" style="margin-top: 20px">
         <div class="container">
             <h2 style="font-size: 35px; color: #524A4E">MANUFACTURING CAPABILITY</h2>
             <div class="row">
@@ -87,7 +87,7 @@
                 <div class="column">
                     <img src="{{ asset('assets/image/home/ilmuan.png') }}" alt="Ilmuan">
                 </div>
-                <div class="column">
+                <div class="column" style="margin-top: 50px;">
                     <h4>WHAT WE MAKE</h4>
                     <p>Memanfaatkan yang terbaik dari alam untuk memberikan hasil terbaik adalah misi pribadi kami. Kami
                         menggabungkan bahan kandungan yang bermanfaat dengan ilmu pengetahuan dan teknologi yang
@@ -99,7 +99,7 @@
         </div>
     </div>
 
-    <div class="company-profile">
+    <div class="company-profile fade-in-up">
         <div class="container">
             <h2 style="font-size: 35px; color:#524A4E; margin-top: 7%;">COMPANY PROFILE JDO</h2>
             <iframe src="https://drive.google.com/file/d/1F8Qonw4pU3NcsqQDFNsaQ4-siYjLFody/preview" width="900"
@@ -108,7 +108,7 @@
         </div>
     </div>
 
-    <div class="operational-excellence">
+    <div class="operational-excellence fade-in-up">
         <div class="container">
             <h2 style="font-size: 35px; color:#524A4E;">OPERATIONAL EXCELLENCE</h2>
             <div class="icons d-flex justify-content-between flex-wrap">
@@ -121,6 +121,26 @@
         </div>
     </div>
     <p>cobaa</p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('.fade-in-up');
+        
+        function checkPosition() {
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+      
+                if (position < windowHeight - 50) {
+                    element.classList.add('show');
+                }
+            });
+        }
+      
+        window.addEventListener('scroll', checkPosition);
+        checkPosition();
+      });
+      </script>
 
 
 @include('layouts.footer')

@@ -6,6 +6,7 @@ body::-webkit-scrollbar {
     padding-top: 65px;
     margin-left: -120px;
     color: black;
+    text-align: center;
 }
 
 .form{

@@ -65,7 +65,7 @@
                                     <i class="bi bi-trash3-fill" style="margin-right: 5px;"></i>Delete
                                 </button>
                             </form>
-                            <a href="{{ url('/update_product') }}" style="text-decoration: none;">
+                            <a href="{{ route('update', $pd->id) }}" style="text-decoration: none;">
                                 <button type="button" class="btn btn-primary" style="height: 36px;">
                                     <i class="bi bi-gear-fill" style="margin-right: 5px;"></i>Update
                                 </button>

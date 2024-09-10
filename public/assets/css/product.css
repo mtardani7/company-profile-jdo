@@ -8,7 +8,7 @@ body::-webkit-scrollbar {
     padding-top: 50px;
 }
 
-.container-fluid {
+.container-fluid.product{
     padding-top: 50px;
     margin-top: 50px;
     background-color: #d9d9d9;

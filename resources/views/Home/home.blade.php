@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="column">
                     <div>
-                        <h2 style="padding-top: 50px; font-size: 35px; color: #524A4E">QUALITY PROMISE</h2>
+                        <h2 style="padding-top: 10%; font-size: 35px; color: #524A4E">QUALITY PROMISE</h2>
                         <h4>With us, Quality is guaranteed, not just controlled.</h4>
                         <br>
                         <p>Jewel Consumer Care is committed to global excellence. We are ISO 9001 and Halal “A” certified,

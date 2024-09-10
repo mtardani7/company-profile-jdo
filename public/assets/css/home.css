@@ -89,7 +89,7 @@ body::-webkit-scrollbar {
 }
 
 .certifications img {
-    width: 100px;
+    width: 100%;
     padding: 30px 25px;
 }
 

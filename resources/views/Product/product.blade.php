@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1"
+                        {{-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
@@ -63,7 +63,7 @@
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
-                        </button>
+                        </button> --}}
                     </div>
                 </div>
                 <div class="col" style="padding-left: 60px; padding-top: 60px">

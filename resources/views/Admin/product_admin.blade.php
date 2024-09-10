@@ -61,7 +61,7 @@
                         <h3 style="padding-bottom: 20px; padding-left: 40px; font-weight: bold">{{ $pd->jenis }}</h3>
                         <div class="position-absolute" style="top: 0; right: -590px; display: flex; gap: 10px; padding-right: 20px;">
                             <form action="{{ route('delete', $pd->id) }}" method="get">
-                                <button type="submit" class="btn btn-danger btn-sm" style="height: 36px;">
+                                <button type="button" class="btn btn-danger btn-sm" style="height: 36px;">
                                     <i class="bi bi-trash3-fill" style="margin-right: 5px;"></i>Delete
                                 </button>
                             </form>

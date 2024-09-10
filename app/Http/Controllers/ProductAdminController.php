@@ -26,7 +26,8 @@ class ProductAdminController extends Controller
     }
     public function update()
     {
-        return view('Admin.update_produk');
+        $product = Product::all()->first();
+        return view('Admin.update_produk', compact('product'));
     }
 
     public function createProduct(Request $request)
@@ -72,27 +73,34 @@ class ProductAdminController extends Controller
             'jenis' => 'required|string|max:255',
             'merek' => 'required|string|max:255',
             'foto' => 'sometimes|array',
-            'foto.*' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'foto.*' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:10240',
             'keunggulan' => 'required|array',
+        ],[
+            'foto.max' => 'Gambar tidak boleh lebih dari 10 MB.',
         ]);
 
         $product = Product::findOrFail($id);
 
+        // Pengecekan apakah ada file gambar yang diunggah
         if ($request->hasFile('foto')) {
             $photos = [];
             foreach ($request->file('foto') as $photo) {
-                $path = $photo->store('public/photos');
-                $photos[] = $path;
+                $filename = uniqid() . '.' . $photo->getClientOriginalExtension();
+                $photo->storeAs('foto', $filename, 'public');
+                $photos[] = $filename;
             }
-            $product->foto = json_encode($photos);
+            // Jika ada file baru, update kolom foto di database
+            $product->foto = $photos;
         }
+
 
         $product->jenis = $request->jenis;
         $product->merek = $request->merek;
-        $product->keunggulan = json_encode($request->keunggulan);
+        $product->keunggulan = ($request->keunggulan);
         $product->save();
+        session()->flash('success', 'Product created successfully.');
 
-        return redirect()->route('update')->with('success', 'Product updated successfully.');
+        return redirect()->back()->with('success', 'Product updated successfully.');
     }
 
     public function delete(Request $request, $id){

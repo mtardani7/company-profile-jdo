@@ -1,4 +1,4 @@
-@include('layouts.navbar_admin');
+@extends('layouts.navbar_admin')
 
 @section('title')
     Update
@@ -62,7 +62,7 @@
             @endphp
             <div id="image-inputs" style="width: 695px;">
                 @foreach ($fotoArray as $index => $foto)
-                    <div class="mb-3">
+                    <div class="mb-3" id="image-group-{{ $index }}">
                         <label for="inputGambar{{ $index }}" style="color: black" class="form-label"><b>Gambar
                                 {{ $index + 1 }}</b></label>
                         <div class="input-group">
@@ -72,6 +72,12 @@
                                 class="btn btn-outline-secondary" onclick="addImageInput()">
                                 <i class="bi bi-plus"></i>
                             </button>
+                            @if ($index > 0)
+                                <button type="button" style="margin-left: 10px; border-radius: 0;"
+                                    class="btn btn-outline-secondary" onclick="removeImageInput({{ $index }})">
+                                    <i class="bi bi-dash"></i>
+                                </button>
+                            @endif
                         </div>
                     </div>
                 @endforeach
@@ -84,7 +90,7 @@
 
             <div id="description-inputs" style="width: 695px;">
                 @foreach ($keunggulanArray as $index => $keunggulan)
-                    <div class="mb-3">
+                    <div class="mb-3" id="description-group-{{ $index }}">
                         <label for="inputDeskripsi{{ $index }}" style="color: black"
                             class="form-label"><b>Keunggulan
                                 Produk {{ $index + 1 }}</b></label>
@@ -96,6 +102,12 @@
                                 class="btn btn-outline-secondary" onclick="addDescriptionInput()">
                                 <i class="bi bi-plus"></i>
                             </button>
+                            @if ($index > 0)
+                                <button type="button" style="margin-left: 10px; border-radius: 0;"
+                                    class="btn btn-outline-secondary" onclick="removeDescriptionInput({{ $index }})">
+                                    <i class="bi bi-dash"></i>
+                                </button>
+                            @endif
                         </div>
                     </div>
                 @endforeach
@@ -112,19 +124,20 @@
     @include('layouts.footer')
 
     <script>
-        let imageInputCount = 1;
-        let descriptionInputCount = 1;
+        let imageInputCount = {{ count($fotoArray) }};
+        let descriptionInputCount = {{ count($keunggulanArray) }};
 
         function addImageInput() {
             imageInputCount++;
             const imageInputsDiv = document.getElementById('image-inputs');
             const newInputDiv = document.createElement('div');
             newInputDiv.classList.add('mb-3');
+            newInputDiv.id = `image-group-${imageInputCount}`;
             newInputDiv.innerHTML = `
             <label for="inputGambar${imageInputCount}" style="color: black" class="form-label"><b>Gambar</b></label>
             <div class="input-group">
                 <input type="file" class="form-control" id="inputGambar${imageInputCount}" accept="image/*" style="border: black solid 1px;" name="foto[]" >
-                <button type="button" style="margin-left: 10px; border-radius: 0;" class="btn btn-outline-secondary" onclick="removeImageInput(this)">
+                <button type="button" style="margin-left: 10px; border-radius: 0;" class="btn btn-outline-secondary" onclick="removeImageInput(${imageInputCount})">
                     <i class="bi bi-dash"></i>
                 </button>
                 <button type="button" style="margin-left: 10px; border-radius: 0;" class="btn btn-outline-secondary" onclick="addImageInput()">
@@ -135,10 +148,11 @@
             imageInputsDiv.appendChild(newInputDiv);
         }
 
-        function removeImageInput(button) {
-            const inputGroup = button.parentElement;
-            const inputDiv = inputGroup.parentElement;
-            inputDiv.remove();
+        function removeImageInput(index) {
+            const inputDiv = document.getElementById(`image-group-${index}`);
+            if (inputDiv) {
+                inputDiv.remove();
+            }
         }
 
         function addDescriptionInput() {
@@ -146,12 +160,13 @@
             const descriptionInputsDiv = document.getElementById('description-inputs');
             const newInputDiv = document.createElement('div');
             newInputDiv.classList.add('mb-3');
+            newInputDiv.id = `description-group-${descriptionInputCount}`;
             newInputDiv.innerHTML = `
             <label for="inputDeskripsi${descriptionInputCount}" style="color: black" class="form-label"><b>Keunggulan Produk</b></label>
             <div class="input-group">
                 <input type="text" class="form-control" id="inputDeskripsi${descriptionInputCount}" placeholder="masukkan keunggulan produk" style="border: black solid 1px;" name="keunggulan[]" >
                 
-                <button type="button" style="margin-left: 10px; border-radius: 0;" class="btn btn-outline-secondary" onclick="removeDescriptionInput(this)">
+                <button type="button" style="margin-left: 10px; border-radius: 0;" class="btn btn-outline-secondary" onclick="removeDescriptionInput(${descriptionInputCount})">
                     <i class="bi bi-dash"></i>
                 </button>
                 <button type="button" style="margin-left: 10px; border-radius: 0;" class="btn btn-outline-secondary" onclick="addDescriptionInput()">
@@ -162,9 +177,11 @@
             descriptionInputsDiv.appendChild(newInputDiv);
         }
 
-        function removeDescriptionInput(button) {
-            const inputGroup = button.parentElement;
-            const inputDiv = inputGroup.parentElement;
-            inputDiv.remove();
+        function removeDescriptionInput(index) {
+            const inputDiv = document.getElementById(`description-group-${index}`);
+            if (inputDiv) {
+                inputDiv.remove();
+            }
         }
     </script>
+@endsection

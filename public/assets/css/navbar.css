@@ -7,7 +7,7 @@ html {
 }
 
 .navbar {
-    position: fixed;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -75,4 +75,36 @@ main {
 
 .navbar .btn:hover {
     background-color: #006a55;
+}
+
+@media (max-width: 768px){
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .navbar .btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px){
+    .navbar img{
+        height: 40px;
+    }
+    .navbar ul li a {
+        font-size: 14px;
+    }
+    .navbar .btn{
+        padding: 6px 12px;
+        font-size: 14px;
+    }
 }

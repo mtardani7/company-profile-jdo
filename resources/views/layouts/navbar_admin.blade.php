@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jewel Dyna Oralcare</title>
     <link rel="stylesheet" href="{{ asset('assets/css/navbar.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="{{ asset('assets/image/logo.png') }}" type="image/x-icon">
 </head>
 
 <body>
-    <nav class="navbar" style="position: fixed;">
+    <nav class="navbar" style="position: relative;">
         <img src="{{ asset('assets/image/logo.png') }}" alt="Logo">
         <ul>
             @auth

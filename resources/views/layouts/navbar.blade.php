@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark" style="position: fixed;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="position: relative;">
     <div class="container-fluid">
         <img src="{{ asset('assets/image/logo.png') }}" alt="Logo">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

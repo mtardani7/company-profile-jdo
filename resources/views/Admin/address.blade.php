@@ -9,6 +9,10 @@
 <link rel="stylesheet" href="{{ asset('assets/css/admin/adress_admin.css') }}">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
+<div id="preloader">
+    <img src="{{ '/assets/image/logo.png' }}" alt="Loading...">
+</div>
+
 <img src="{{asset('assets/image/Address/addrres.png')}}" alt="background" style="width: 100%">
 
 <div class="card-about container-fluid mt-5 fade-in-up">
@@ -98,5 +102,30 @@
     checkPosition();
   });
   </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(() => {
+            document.getElementById('preloader').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }, 500);
+
+        const elements = document.querySelectorAll('.fade-in-up');
+
+        function checkPosition() {
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (position < windowHeight - 50) {
+                    element.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkPosition);
+        checkPosition();
+    });
+</script>
 
 @include('layouts.footer')

@@ -24,9 +24,9 @@ class ProductAdminController extends Controller
     {
         return view('Admin.tambah_product');
     }
-    public function update()
+    public function update($id)
     {
-        $product = Product::all()->first();
+        $product = Product::find($id);
         return view('Admin.update_produk', compact('product'));
     }
 

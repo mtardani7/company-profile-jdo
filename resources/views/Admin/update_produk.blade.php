@@ -68,6 +68,7 @@
                         <div class="input-group">
                             <input type="file" class="form-control" id="inputGambar{{ $index }}" accept="image/*"
                                 style="border: black solid 1px;" name="foto[]" value="{{ $foto }}">
+                            {{-- <span class="file-name" style="margin-left: 10px; line-height: 38px;">{{ $foto }}</span> --}}
                             <button type="button" style="margin-left: 10px; border-radius: 0;"
                                 class="btn btn-outline-secondary" onclick="addImageInput()">
                                 <i class="bi bi-plus"></i>

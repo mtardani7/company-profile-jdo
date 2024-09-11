@@ -121,7 +121,5 @@
             </div>
         </div>
     </div>
-    <p>cobaa</p>
-
 
     @include('layouts.footer')

@@ -31,10 +31,10 @@
                 <div class="col" style="margin-left: 150px;">
                     <div class="draf">
                         <h4>Quick Links</h4>
-                        <h6>> Home</h6>
-                        <h6>> About Us</h6>
-                        <h6>> Product</h6>
-                        <h6>> Address</h6>
+                        <h6><a href="{{ url('/') }}">> Home</a></h6>
+                        <h6><a href="{{ url('/about_us') }}">> About Us</a></h6>
+                        <h6><a href="{{ url('/product') }}">> Product</a></h6>
+                        <h6><a href="{{ url('/address') }}">> Address</a></h6>
                     </div>
                 </div>
 

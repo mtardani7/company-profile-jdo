@@ -57,7 +57,7 @@
 
     <!--Kids -->
     @foreach ($product as $pd)
-        <div class="container-fluid text-start">
+        <div class="container-fluid producttext-start">
             <div class="row align-items-start">
                 <div class="col">
                     <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel"

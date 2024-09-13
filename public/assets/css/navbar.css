@@ -60,7 +60,7 @@ html {
 }
 
 main {
-    padding-top: 70px; /* Menambahkan jarak untuk konten agar tidak tertutup navbar */
+    padding-top: 70px; 
 }
 .navbar .btn {
     background-color: #008b72;

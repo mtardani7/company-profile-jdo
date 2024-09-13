@@ -17,7 +17,7 @@ body {
     margin-top: 30px;
 }
 
-.contact-info p{
+.contact-info p {
     margin: 0;
     padding: 5px 0;
     display: flex;
@@ -32,7 +32,14 @@ body {
     font-size: 16px;
 }
 
-.draf{
+.draf a {
     font-family: "Times New Roman";
     line-height: 1.6;
+    text-decoration: none;
+    color: white;
+    padding-top: 40%;
 }
+
+/* .draf a:hover {
+    color: blue;     
+} */

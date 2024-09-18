@@ -1,4 +1,10 @@
-@include('layouts.navbar')
+{{-- @include('layouts.navbar') --}}
+@if(auth()->check())
+    @include('layouts.navbar_admin')
+@else
+    @include('layouts.navbar')
+@endif
+
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">

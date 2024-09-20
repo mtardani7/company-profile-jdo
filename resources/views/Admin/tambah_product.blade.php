@@ -12,20 +12,20 @@
 
 @section('content')
 
-<div class="container text-start">
-    <div class="row align-items-start">
-      <div class="col">
-        <div style="padding-top: 60px; padding-left: 30px ; font-size: 30px">
-            <a href="/product/admin"><i class="icon fa-solid fa-angle-left"></i></a>
+    <div class="container text-start">
+        <div class="row align-items-start">
+            <div class="col">
+                <div style="padding-top: 60px; padding-left: 30px ; font-size: 30px">
+                    <a href="/product/admin"><i class="icon fa-solid fa-angle-left"></i></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="teks">
+                    <h2>Create Product</h2>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="teks">
-            <h2>Create Product</h2>
-        </div>
-      </div>
     </div>
-</div>
 
     @if ($errors->any())
         <div class="position-fixed" style="bottom: 16px; right: 16px; width: 400px; z-index:10">
@@ -85,7 +85,7 @@
                     <div class="input-group">
                         <input type="text" class="form-control" id="inputDeskripsi1"
                             placeholder="masukkan keunggulan produk" style="border: black solid 1px;" name="keunggulan[]"
-                             required>
+                            required>
                         <button type="button" style="margin-left: 10px; border-radius: 0;"
                             class="btn btn-outline-secondary" onclick="addDescriptionInput()">
                             <i class="bi bi-plus"></i>
@@ -96,7 +96,8 @@
             <button type="submit" class="btn_tambah">Simpan</button>
             <div class="text">
                 <p style="padding-left: 220px; font-weight: bold; font-size: 30px; padding-top: 60px;">Our Customer</p>
-                <img src="{{ asset('assets/image/Product/pepsoden.png') }}" class="d-block w-20 h-20" style="margin-left: 200px;" alt="Pepsoden">
+                <img src="{{ asset('assets/image/Product/pepsoden.png') }}" class="d-block w-20 h-20"
+                    style="margin-left: 200px;" alt="Pepsoden">
             </div>
         </form>
     </div>
@@ -159,4 +160,12 @@
             const inputDiv = inputGroup.parentElement;
             inputDiv.remove();
         }
+        setTimeout(function() {
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(alert => {
+                alert.classList.remove('show');
+                alert.classList.add('fade');
+            });
+        }, 5000);
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

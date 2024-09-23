@@ -1,10 +1,10 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <nav class="navbar" data-bs-theme="dark" style="height: 60px; background-color: #1A4870"></nav>
 
-<div class="teks" style="padding-top: 10px; text-align: center;">
+{{-- <div class="teks" style="padding-top: 10px; text-align: center;">
     <h2 style=" font-weight: 700;">Login Admin</h2>
     <img src="{{ asset('assets/image/logo.png') }}" alt="Logo" style="width: 370px; padding-top: 20px;">
 </div>
@@ -17,14 +17,6 @@
         </div>
     @endif
 
-    <!-- Error Alert -->
-    {{-- @if ($errors->any())
-        <div class="alert alert-danger" role="alert">
-            @foreach ($errors->all() as $error)
-                <p>{{ $error }}</p>
-            @endforeach
-        </div>
-    @endif --}}
     <form action="{{ route('login') }}" method="POST">
         @csrf
         <div class="mb-3">
@@ -55,7 +47,56 @@
                 style="border-radius: 30px; background-color: #1A4870; color: white;">Login</button>
         </div>
     </form>
+</div> --}}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Konten teks -->
+            <div class="teks text-center mt-4">
+                <h2 class="fw-bold">Login Admin</h2>
+                <img src="{{ asset('assets/image/logo.png') }}" alt="Logo" class="img-fluid mt-3" style="max-width: 100%; height: auto;">
+            </div>
+
+            <!-- Konten form -->
+            <div class="form mt-4">
+                @if (session('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                <form action="{{ route('login') }}" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" name="email" required value="{{ old('email') }}">
+                    </div>
+                    @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+
+                    <div class="mb-3">
+                        <label for="inputPassword5" class="form-label fw-bold">Password</label>
+                        <div class="position-relative">
+                            <input type="password" id="inputPassword5" class="form-control" name="password" required>
+                            <span id="togglePassword" class="position-absolute" style="right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                                👁️
+                            </span>
+                        </div>
+                    </div>
+                    @error('password')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+
+                    <div class="d-flex justify-content-center mt-4">
+                        <button type="submit" class="btn btn-primary" style="border-radius: 30px; background-color: #1A4870;">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+
 <script>
     document.getElementById('togglePassword').addEventListener('click', function() {
         const passwordField = document.getElementById('inputPassword5');

@@ -1,4 +1,8 @@
-@include('layouts.navbar')
+@if(auth()->check())
+    @include('layouts.navbar_admin')
+@else
+    @include('layouts.navbar')
+@endif
 
 @section('title')
     About Us

@@ -1,24 +1,29 @@
 @include('layouts.navbar_admin')
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('assets/css/admin/home_admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
 
-    <img src="{{ asset('assets/image/home/home.png') }}" style="width: 100%; height: 500px;" alt="Home">
+    <div id="preloader">
+        <img src="{{ '/assets/image/logo.png' }}" alt="Loading...">
+    </div>
+
+    <img class="hero-img" src="{{ asset('assets/image/home/home.png') }}" alt="Home">
     <div class="hero-section">
         <div class="text-box">
-            <h2>How We Work</h2>
-            <p>At our core, we prioritize excellence and adherence to the highest standards. Our Domestic Medical Devices
+            <h2 class="px-2">How We Work</h2>
+            <p class="px-2">At our core, we prioritize excellence and adherence to the highest standards. Our Domestic
+                Medical Devices
                 production is aligned with the best practices, ensuring top-tier quality and compliance. We strictly follow
                 the...</p>
         </div>
     </div>
 
-    <div class="quality-promise fade-in-up">
+    <div class="quality-promise">
         <div class="container">
             <div class="row">
                 <div class="column">
                     <div>
-                        <h2 style="padding-top: 50px; font-size: 35px; color: #524A4E">QUALITY PROMISE</h2>
+                        <h2 style="padding-top: 10%; font-size: 35px; color: #524A4E">QUALITY PROMISE</h2>
                         <h4>With us, Quality is guaranteed, not just controlled.</h4>
                         <br>
                         <p>Jewel Consumer Care is committed to global excellence. We are ISO 9001 and Halal “A” certified,
@@ -68,7 +73,7 @@
         </div>
     </div>
 
-    <div class="manufacturing-capability fade-in-up" style="margin-top: 20px">
+    <div class="manufacturing-capability" style="margin-top: 20px">
         <div class="container">
             <h2 style="font-size: 35px; color: #524A4E">MANUFACTURING CAPABILITY</h2>
             <div class="row">
@@ -87,7 +92,7 @@
                 <div class="column">
                     <img src="{{ asset('assets/image/home/ilmuan.png') }}" alt="Ilmuan">
                 </div>
-                <div class="column" style="margin-top: 50px;">
+                <div class="column">
                     <h4>WHAT WE MAKE</h4>
                     <p>Memanfaatkan yang terbaik dari alam untuk memberikan hasil terbaik adalah misi pribadi kami. Kami
                         menggabungkan bahan kandungan yang bermanfaat dengan ilmu pengetahuan dan teknologi yang
@@ -99,7 +104,7 @@
         </div>
     </div>
 
-    <div class="company-profile fade-in-up">
+    <div class="company-profile">
         <div class="container">
             <h2 style="font-size: 35px; color:#524A4E; margin-top: 7%;">COMPANY PROFILE JDO</h2>
             <iframe src="https://drive.google.com/file/d/1F8Qonw4pU3NcsqQDFNsaQ4-siYjLFody/preview" width="900"
@@ -108,7 +113,7 @@
         </div>
     </div>
 
-    <div class="operational-excellence fade-in-up">
+    <div class="operational-excellence">
         <div class="container">
             <h2 style="font-size: 35px; color:#524A4E;">OPERATIONAL EXCELLENCE</h2>
             <div class="icons d-flex justify-content-between flex-wrap">
@@ -124,23 +129,28 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-        const elements = document.querySelectorAll('.fade-in-up');
-        
-        function checkPosition() {
-            elements.forEach(element => {
-                const position = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-      
-                if (position < windowHeight - 50) {
-                    element.classList.add('show');
-                }
-            });
-        }
-      
-        window.addEventListener('scroll', checkPosition);
-        checkPosition();
-      });
-      </script>
+            setTimeout(() => {
+                document.getElementById('preloader').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }, 500); 
+    
+            const elements = document.querySelectorAll('.fade-in-up');
+    
+            function checkPosition() {
+                elements.forEach(element => {
+                    const position = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+    
+                    if (position < windowHeight - 50) {
+                        element.classList.add('show');
+                    }
+                });
+            }
+    
+            window.addEventListener('scroll', checkPosition);
+            checkPosition();
+        });
+    </script>
 
 
-@include('layouts.footer')
+    @include('layouts.footer')

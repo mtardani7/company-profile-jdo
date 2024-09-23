@@ -15,11 +15,12 @@ class LoginAdminController extends Controller
     }
     public function admin()
     {
+        // return view('Home.home');
         return view('Admin.home_admin');
     }
     public function about_us()
     {
-        return view('Admin.about_us');
+        return view('About Us.about_us'); 
     }
     public function product()
     {
@@ -28,7 +29,7 @@ class LoginAdminController extends Controller
     }
     public function address()
     {
-        return view('Admin.address');
+        return view('Address.address'); 
     }
     public function login(Request $request)
     {

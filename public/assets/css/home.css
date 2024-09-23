@@ -29,7 +29,7 @@ body::-webkit-scrollbar {
 
 .hero-section img {
     width: 100%;
-    height: auto; /* Ensure images scale proportionally */
+    height: auto;
     display: block;
 }
 
@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
 
 .manufacturing-capability img {
     width: 70%;
-    height: auto; /* Keep aspect ratio */
+    height: auto;
     margin-top: 20px;
     box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.7);
     border-radius: 8px;
@@ -111,12 +111,25 @@ body::-webkit-scrollbar {
 }
 
 .company-profile {
+    padding: 0 15px; /* Tambahkan padding di kiri dan kanan untuk jarak */
     text-align: center;
 }
 
-.company-profile img {
-    width: 100%;
-    height: auto;
+.container {
+    max-width: 100%; /* Kontainer akan menyesuaikan dengan lebar layar */
+    margin: 0 auto; /* Tengah-tengah kontainer secara horizontal */
+}
+
+h2 {
+    font-size: 2.5em; /* Ukuran font relatif untuk responsivitas */
+    color: #524a4e;
+    margin-top: 5%; /* Mengurangi margin atas agar lebih responsif */
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+iframe {
+    max-height: 600px; /* Maksimum tinggi iframe untuk mencegah terlalu besar */
+    border: none; /* Menghapus border default */
 }
 
 .operational-excellence .icons {
@@ -177,6 +190,9 @@ body::-webkit-scrollbar {
         padding-left: 10px;
         padding-right: 10px;
     }
+    h2 {
+        font-size: 2em; /* Mengurangi ukuran font pada layar kecil */
+    }
 }
 
 @media (max-width: 480px) {
@@ -205,4 +221,22 @@ body::-webkit-scrollbar {
     .hero-section {
         margin: 1rem;
     }
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#preloader img {
+    width: 100px; /* Sesuaikan dengan ukuran logo */
+    height: auto;
 }

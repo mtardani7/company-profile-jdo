@@ -48,7 +48,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse p-0" id="navbarNav">
+            <div class="navbar-collapse p-0" id="navbarNav">
                 <div class="me-auto"></div>
                 <ul class="navbar-nav">
                     @auth

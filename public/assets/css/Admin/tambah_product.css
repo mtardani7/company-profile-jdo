@@ -3,9 +3,9 @@ body::-webkit-scrollbar {
 } 
 
 .teks h2{
-    padding-top: 20px;
+    padding-top: 50px;
     color: black;
-    text-align: center;
+    /* tex  t-align: center; */
 }
 
 .form{
